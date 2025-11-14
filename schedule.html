@@ -315,8 +315,9 @@
                         display: block;
                         text-align: left !important;
                         border: none !important;
-                        padding: 4px 0 !important;
+                        padding: 4px 10px !important;
                         width: 100% !important;
+                        box-sizing: border-box;
                     }
 
                     /* Session labels */
@@ -576,12 +577,11 @@
                     </tr>
                     <tr>
                         <td class="tg-0pky">1430 - 1515<br></td>
-                        <td class="tg-speaker">Anupam Gupta</td>
+                        <td class="tg-speaker">Anupam Gupta: <a href="#anupam-gupta">Good, Better, Best: Combinatorial Optimization via Comparisons</a></td>
                     </tr>
                     <tr>
                         <td class="tg-0pky">1515 - 1600<br></td>
-                        <td class="tg-speaker">Manoj Gupta: <a href="#manoj-gupta">Improved 2-Approximate Shortest Paths
-                                for close vertex pairs</a></td>
+                        <td class="tg-speaker">Manoj Gupta: <a href="#manoj-gupta">Improved 2-Approximate Shortest Paths for close vertex pairs</a></td>
                     </tr>
                     <tr>
                         <td class="tg-break" colspan="2">Coffee Break (1600 - 1645)</td>
@@ -773,6 +773,11 @@
         <section id="schedule">
             <h2>Titles and Abstracts</h2>
             <ul>
+                <li id="anupam-gupta"><strong>Anupam Gupta</strong>
+                    <p><strong>Title:</strong> Good, Better, Best: Combinatorial Optimization via Comparisons</p>
+                    <p><strong>Abstract:</strong> In classical combinatorial optimization problems, we are given a feasible set and an objective function (either explicitly, or via a value/demand oracle), and we want to find an optimal solution. Motivated by applications where users provide very sparse feedback, we ask: what if we are only allowed comparisons between feasible solutions? For instance, suppose we can compare any two edge-cuts in a graph and find out which is smaller, or if they are equal. Can we find the minimum cut using few comparisons? Can we do this efficiently? In this work, we pose and answer some of these questions, and suggest other exciting directions for research.</p>
+                    <p>This is joint work with Vincent Cohen-Addad, Tommaso d'Orsi, Guru Guruganesh, Euiwoong Lee, Renato Paes Leme, Debmalya Panigrahi, Madhusudhan Pittu, Jon Schneider, and David Woodruff.</p>
+                </li>
                 <li id="manoj-gupta"><strong>Manoj Gupta</strong>
                     <p><strong>Title:</strong> Improved 2-Approximate Shortest Paths for close vertex pairs</p>
                     <p><strong>Abstract:</strong> An influential result by Dor, Halperin, and Zwick (FOCS 1996, SICOMP
