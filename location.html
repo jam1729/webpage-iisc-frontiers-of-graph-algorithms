@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontiers of Graph Algorithms - Bengaluru</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="https://www.csa.iisc.ac.in/newweb/wp-content/uploads/2019/12/csa-logo-color.png" alt="Logo" class="logo">
+            </div>
+            <h1>Frontiers of Graph Algorithms</h1>
+            <div class="logo-container">
+                <img src="images/IIScLogo.png" alt="Logo" class="logo">
+            </div>
+        </div>
+        <strong>Supported by the <a href="https://www.csa.iisc.ac.in/cfe-walmart/">Walmart Center for Tech Excellence.</a></strong>
+        <nav>
+            <ul>
+                <li><a href="index.html#speakers">Speakers</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="location.html">Location</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+
+
+<section id="location">
+    <br>
+    <h2>Location - IISc</h2>
+    <p>The workshop will be held at the Indian Institute of Science (IISC), Bangalore.</p>
+    <p>Address: IISC Campus, CV Raman Rd, Bengaluru, Karnataka 560012, India</p>
+    <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7777.77777777778!2d77.567383!3d13.018343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670a4d7bff7%3A0x49a7e6c5b6d1db4e!2sIndian%20Institute%20of%20Science!5e0!3m2!1sen!2sin!4v1622020623281!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <h2>Guest House Locations</h2>
+    <ul class="location-list">
+        <li><a href="https://maps.app.goo.gl/Hbe9M9RNLR77Yiw5A">Main Guest House</a></li>
+        <li><a href="https://maps.app.goo.gl/DBR3CaYevBH5JtAJ7">Centenary Visitors House</a></li>
+        <li><a href="https://maps.app.goo.gl/EVeMCwJT1p8pKVC79">Hoysala Guest House</a></li>
+        <li><a href="https://maps.app.goo.gl/rAuG92gmx2xYUZXJ7">Jawahar Visitors House</a></li>
+        <li><a href="https://maps.app.goo.gl/zCuC6TsCTXhvSs3o6">Green Path Eco Hotel</a></li>
+    </ul>
+</section>
+
+<!-- <section id="location">
+    <h2>Other Important Locations</h2>
+    <div class="tabs">
+        <input type="radio" id="tab-mainguesthouse" name="tab" checked>
+        <label for="tab-mainguesthouse">Main Guest House</label>
+        
+        <input type="radio" id="tab-centenaryvisitorshouse" name="tab">
+        <label for="tab-centenaryvisitorshouse">Centenary Visitors House</label>
+        
+        <input type="radio" id="tab-hoysalaguesthouse" name="tab">
+        <label for="tab-hoysalaguesthouse">Hoysala Guest House</label>
+        
+        <input type="radio" id="tab-jawaharvisitorshouse" name="tab">
+        <label for="tab-jawaharvisitorshouse">Jawahar Visitors House</label>
+        
+        <input type="radio" id="tab-greenpathecohotel" name="tab">
+        <label for="tab-greenpathecohotel">Green Path Eco Hotel</label>
+    </div>
+    <div class="tab-contents">
+        <div id="tab-mainguesthouse" class="tab-content">
+            <div class="map-container">
+                <iframe width="100%" height="100%" style="border:0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBAM2o7PiQqwk15LC1XRH2e_KJ-jUa7KYk&zoom=11&maptype=roadmap&q=Main+Guest+House" title="Google map of Main Guest House"></iframe>
+            </div>
+        </div>
+        <div id="tab-centenaryvisitorshouse" class="tab-content">
+            <div class="map-container">
+                <iframe width="100%" height="100%" style="border:0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBAM2o7PiQqwk15LC1XRH2e_KJ-jUa7KYk&zoom=11&maptype=roadmap&q=Centenary+Visitors+House" title="Google map of Centenary Visitors House"></iframe>
+            </div>
+        </div>
+        <div id="tab-hoysalaguesthouse" class="tab-content">
+            <div class="map-container">
+                <iframe width="100%" height="100%" style="border:0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBAM2o7PiQqwk15LC1XRH2e_KJ-jUa7KYk&zoom=11&maptype=roadmap&q=Hoysala+Guest+House" title="Google map of Hoysala Guest House"></iframe>
+            </div>
+        </div>
+        <div id="tab-jawaharvisitorshouse" class="tab-content">
+            <div class="map-container">
+                <iframe width="100%" height="100%" style="border:0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBAM2o7PiQqwk15LC1XRH2e_KJ-jUa7KYk&zoom=11&maptype=roadmap&q=Jawahar+Visitors+House" title="Google map of Jawahar Visitors House"></iframe>
+            </div>
+        </div>
+        <div id="tab-greenpathecohotel" class="tab-content">
+            <div class="map-container">
+                <iframe width="100%" height="100%" style="border:0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBAM2o7PiQqwk15LC1XRH2e_KJ-jUa7KYk&zoom=11&maptype=roadmap&q=Green+Path+Eco+Hotel" title="Google map of Green Path Eco Hotel"></iframe>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+
+<section id="details">
+    <h2>About Bengaluru</h2>
+    <div class="loc-image">
+        <figure class="alignright">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Bangalore_palace_side_view.jpg/200px-Bangalore_palace_side_view.jpg" alt="Bengaluru Image"/>
+        </figure>
+    </div>
+    <p>Bangalore, officially known as Bengaluru, is the vibrant host city for our workshop. Renowned as India’s Silicon Valley, Bangalore stands at the forefront of technological innovation and scientific research.</p>
+    <p> The city boasts a dynamic ecosystem with prestigious research institutions, such as the <a href="https://iisc.ac.in/">Indian Institute of Science (IISc)</a>, <a href="https://icts.res.in/">International Centre for Theoretical Sciences (ICTS)</a>, <a href="https://www.rri.res.in/">Raman Research Institute (RRI)</a>, <a href="https://www.jncasr.ac.in/home">Jawaharlal Nehru Centre for Advanced Scientific Research (JNCASR)</a>, <a href="https://www.isro.gov.in/">Indian Space Research Organisation (ISRO)</a>. These institutions, alongside major global tech companies including Google, Microsoft, and IBM, underscore Bangalore's pivotal role in advancing science and technology. Its robust infrastructure, pleasant climate, and welcoming atmosphere make it an ideal setting for scientific discourse and collaboration. </p>
+    <p>With a burgeoning startup scene and a rich tradition of academic excellence, Bangalore offers a unique blend of opportunities and cultural experiences for the workshop participants. As we gather here, attendees will not only engage with groundbreaking scientific advancements but also experience the city’s renowned hospitality and vibrant culture.</p>
+</section>
+
+<section id="details">
+    <h2>About Indian Institute of Science Bengaluru (IISc Bengaluru)</h2>
+    <div class="loc-image">
+        <figure class="alignright size-medium">
+            <img decoding="async" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/IISC_Bangalore_02.jpg/200px-IISC_Bangalore_02.jpg" alt="IISc Bengaluru Image"/>
+        </figure>
+    </div>
+    <p>IISc is India’s top Research University, being a 115 years old institute. It is located in the Southern Indian City of Bangalore, Karnataka. Having a huge coverage area of around 400-acres, the Indian Institute of Science Campus is a Nature’s gift to Bengaluru. (<a href="https://iisc.ac.in" target="_blank" rel="noreferrer noopener">https://iisc.ac.in</a>)</p>
+    <p>IISc was established in 1909 by a visionary public-private partnership between the industrialist Jamsetji Nusserwanji Tata, the Maharaja of Mysore, and the Government of India. IISc has a rich legacy of excellence in scientific contributions, major contributions to the nation, and for seeding several major Science & Technology institutions.</p>
+    <p>The Institute is currently ranked as India’s top academic university. The Division of EECS (Electronics, Electrical, and Computer Sciences) at IISc is a lively hub of research in EECS with 85 faculty members and about 400 PhD students.</p>
+    <p>The IISc campus is a beautifully wooded campus and home to flora and fauna of the rarest varieties.</p>
+</section>
+
+
+<section id="details">
+    <h2 class="wp-block-heading">Getting Here</h2>
+    <p>Bengaluru is well connected by air, rail, and road to all major cities such as Delhi, Chennai, Mumbai, Kolkata, and most other important metro cities and towns. The city is served by Kempegowda International Airport, which offers a wide range of international 
+    (and domestic) flights, also making it easily accessible from around the globe.</p>
+
+
+    <h2 class="wp-block-heading">How to reach IISc</h2>
+
+    <p>The Institute is known as <b>"Tata Institute"</b> to the locals and is located just past
+    Mekhri Circle, on the way to Yeshwantpur. To reach it, take a right turn at Mekhri Circle
+    when coming from the airport.</p>
+
+    <!-- <div class="loc-image">
+        <figure class="alignright size-medium">
+            <img decoding="async" src="https://demo.onlypixels.com/edm2023/wp-content/uploads/2022/11/edm-bluru-06-1-300x193.jpg" alt="IISc Campus Image"/>
+        </figure>
+    </div> -->
+
+    <h3>Transportation Options</h3>
+    For convenient travel, popular ride-hailing apps such as Uber,
+    Ola, Namma Yatri, and Rapido are available. During peak hours, finding an auto may be
+    challenging, but getting a cab should be easier. Additionally, you can find autos waiting
+    outside major transit points, such as the railway station, ready to take you to the Institute,
+    though the fare might be slightly higher. When using autos, it's helpful to refer to the
+    Institute as the "Tata Institute" rather than "IISc," as it is more widely recognized by local
+    drivers.
+
+
+    <h3>From the Railway Stations</h3>
+
+    <p>The <a href="https://en.wikipedia.org/wiki/Bangalore_City_railway_station" target="_blank"
+    rel="noreferrer noopener">City Railway Station</a> (a.k.a. KSR, SBC, Majestic) is about 7 kms
+    from IISc campus. One will have to get out of the station from platform number 1 and reach the
+    prepaid taxi stand to hire a city taxi (costs about Rs. 150). Majestic (7 kms from IISc) is the
+    Central Bus stand in Bengaluru, which is just opposite the City Railway station. If one happens
+    to reach Majestic, Bengaluru by bus, reach platform number 22 from where almost all buses
+    (for instance route 276) come to the Institute. Note that you can take any bus that stops
+    either at "Tata Institute", or one that stops at "Yeswantpur Circle". The buses will leave
+    you near one of the campus gates, and you would have to further walk another <10 minutes to
+    reach your guest house.</p>
+
+    If you arrive at <a
+    href="https://en.wikipedia.org/wiki/Yesvantpur_Junction_railway_station" target="_blank" rel="noreferrer
+    noopener">Yeshwantpur Station</a>, which is approximately 2-3 kilometers from the IISc
+    campus, the most convenient option is to take a local auto rickshaw from outside the station.
+    The fare is typically around Rs. 100, but you can often negotiate this price given the short
+    distance. For those traveling light, you might prefer to walk to the campus, as it is a
+    manageable 15-20 minute stroll.
+
+    <h3>From the Airport</h3>
+    
+    <p>The institute is about 30 kilometers from <a
+    href="https://en.wikipedia.org/wiki/Kempegowda_International_Airport" target="_blank"
+    rel="noreferrer noopener">Kempegowda International Airport</a>. The <a
+    href="https://www.bengaluruairport.com/travellers/transport-parking" target="_blank"
+    rel="noreferrer noopener">BMTC Vayu Vajra AC</a> bus service is an efficient and inexpensive
+    mode of transport available from Bengaluru Airport and throughout the city.</p>
+    
+    <p>One can opt for Bus route No. KIAB-10, which plies every half hour from 6 AM to 10 PM,
+    approximately costing around Rs. 250. Multiple buses ply to Mekhri circle, and these also
+    run throughout the day. One could also chose to get off at Mekhri Circle, and take an auto
+    to the campus, if the aforementioned KIAB-10 is not available.</p>
+    
+    <p>Uber, Ola, Meru Cabs, Easy Cabs, Mega Cabs, and KSTDC (Govt) cabs are the popular taxi
+    services to commute to and from Bengaluru Airport. A detailed list can be <a
+    href="https://www.karnataka.com/bangalore/bangalore-city-taxi-phone-numbers/" target="_blank"
+    rel="noreferrer noopener">seen here</a>.</p>
+</section>
+
+
+<!-- <section id="details">
+
+    <h2 class="section-heading">Bengaluru Airport Facility</h2>
+
+    <p>Bengaluru (Bengaluru) Airport At the Bengaluru International Airport, your convenience is a matter of priority. To ensure you have a safe and comfortable experience at the airport, the authorities have put together a host of services and essential facilities. These are located across the two floors of the airport. Please use the maps provided below to locate the facility or service you may wish to use. You can also approach the friendly staff at the airport for more help.</p>
+    <div class="loc-image">
+        <figure class="alignright size-medium">
+        <img src="https://demo.onlypixels.com/edm2023/wp-content/uploads/2022/11/edm2023-bluru-15-airport-1-300x204.jpg" alt="Bengaluru Airport" class="responsive-image">
+        </figure>
+    </div>
+
+    <p>Arrival at Bengaluru (Bengaluru) Airport Domestic &amp; International Arrivals: Procedures and Services:</p>
+
+    <p>At Bengaluru International Airport, access to Baggage Claim is either through the bus gates or aerobridges. The claim area is on the ground floor of the Terminal Building. Bus gate passengers reach the area directly whereas passengers using the aerobridge arrival will come from the first floor to the ground floor. At the Baggage Claim area, an airport staff member will be there to assist you.</p>
+
+    <p>(Bus gate means those being carried from the aircraft to the arrival lounge by bus provided by the airlines.)</p>
+
+    <p>The arrival lounge has dedicated conveyor belts to serve domestic and international passengers. A Flight Information Display System (TV Screen) will assist and guide you with coordinated information on respective flight and belt details.</p>
+
+    <p>Once you claim your baggage, please proceed to the designated Arrival Gates which leads you to the Arrival Hall. For further assistance, please contact our designated Information Desk, where staff are available for round-the-clock service.</p>
+
+    <p>We advise you to read the time taken for Baggage Claim at Bengaluru International Airport. (The approximate time for baggage arrival is anywhere from 7 to 45 minutes. Time indicated below includes the entire process from disembarking the aircraft to reaching transport points).</p>
+
+    <ul class="info-list">
+        <li>Aircraft to Terminal: 12 minutes</li>
+        <li>Terminal to Baggage Belt: 5 minutes</li>
+        <li>Baggage Belt to Exit: 2 minutes</li>
+        <li>Exit to Transport Points: 2 minutes</li>
+    </ul>
+
+    <h3 class="subsection-heading">International Passengers please note that:</h3>
+
+    <ul class="info-list">
+        <li>On arriving at Bengaluru International Airport, you must fill in your respective immigration form.</li>
+        <li>You must carry relevant vaccination certificates, if any.</li>
+    </ul>
+
+    <h3 class="subsection-heading">Immigration process at Bengaluru International Airport</h3>
+
+    <p>All arriving passengers are to first report to one of the 18 Immigration Counters, which aid you in completing formalities as per requirement. The approximate time taken for Immigration check is about 7 minutes.</p>
+
+    <h3 class="subsection-heading">Customs rules and regulations</h3>
+
+    <ul class="info-list">
+        <li>Only one (1) laptop is allowed per passenger.</li>
+        <li>Each passenger can carry up to 2 liters of liquor/ alcohol.</li>
+        <li>Each passenger can carry electronic goods valued at less than Rs.25,000.</li>
+    </ul>
+
+    <p>Remaining rules and procedures are governed as laid by the customs authorities.</p>
+
+    <h3 class="subsection-heading">Airport Transfer</h3>
+
+    <p>How to get from the airport to the hotel or their place of stay (e.g., Hotels, IISc guest house). How to get a taxi; what to speak to whom. Charges.</p>
+
+    <p>One can use any of the transport services from the ones given below to reach the venue or place of residence. Each operator will have their counters with a representative who will provide assistance 24 hours a day.</p>
+
+    <p>AC Radio Taxi Services: Air-conditioned cabs operated by Govt of India authorized private vendors are available at the arrival gate. They are safe and courteous and run on meter. The names and telephone number of the various agencies are given below.</p>
+
+    <ul class="info-list">
+        <li>Uber: Book a cab using their mobile app.</li>
+        <li><a href="http://merucabs.com/" target="_blank" class="link">Meru Cabs</a>: 080-4422-4422/ +91 89704 89704</li>
+        <li><a href="http://www.olacabs.com/car-rentals/bangalore" target="_blank" class="link">Ola Cabs</a>: Book a cab using their mobile app.</li>
+        <li>CelCabs: 080-6060-9090</li>
+        <li><a href="http://easycabs.com/" target="_blank" class="link">EasyCabs</a>: 080-4343-4343/ 011-41841212</li>
+        <li><a href="https://www.megacabs.com/" target="_blank" class="link">MegaCabs</a>: 080-4747-4747/ +91 9090909090</li>
+        <li><a href="https://www.kstdc.co/airport-taxi-bangalore/" target="_blank" class="link">KSTDC Taxi:</a> 080-4346-4346/ 080-4466 4466</li>
+        <li>SGL Tours and Travels: 080-4299-4399</li>
+        <li><a href="https://savaari.com/" target="_blank" class="link">Savaari</a>: +91 93585 85237/ +91 90 4545 0000</li>
+        <li><a href="http://www.karnataka.com/bangalore/bangalore-city-taxi-phone-numbers/" target="_blank" class="link">Other cab services</a></li>
+    </ul>
+
+    <h3 class="subsection-heading">Airport to City AC Taxi fares and payment procedures</h3>
+
+    <ul class="info-list">
+        <li>Flag down fare (first 4 kms): Rs. 80</li>
+        <li>Every subsequent kilometer: Rs. 19.5</li>
+        <li>Waiting charges: No charge for the first 20 minutes</li>
+        <li>Waiting charge for next every 15 minutes or part thereof: Rs. 10</li>
+        <li>Luggage charges: No charges for the first 120 Kgs. (Suitcase, Bedding etc.), Rs 5/- for every additional 20 Kgs. or part thereof.</li>
+        <li>Night charges: From midnight 12 O’clock to morning 6 AM ten percent extra on the above fare</li>
+    </ul>
+
+    <p>Passengers must make their payment at the end of their journey and collect a printed electronic receipt. Payment can be made through cash, credit card, or debit card. Rates are charged based on the distance traveled.</p>
+
+    <p>A travel by these AC cabs to Bengaluru City takes approximately 1 to 1 hour 30 minutes depending on traffic conditions.</p>
+
+    <h3 class="subsection-heading">Limousine And Car Rental</h3>
+
+    <ul class="info-list">
+        <li>Akbar Travels: 1-800-226-000</li>
+        <li>Hertz: 99725-02292</li>
+        <li>Choice of self-driven or chauffeured cars</li>
+        <li>Fare: indicative rate up to 25 km is Rs 1,200</li>
+    </ul>
+
+    <p>Airport Shuttle Service: AC Bus Service <a href="http://www.mybmtc.com/" target="_blank" class="link">Bengaluru Metropolitan Transport Corporation (BMTC)</a> has Volvo buses from various points of the city every 15 minutes to the Bengaluru International Airport (BiAL). Contact details (it is not that easy to get a response from these call centers, better to check their <a href="http://www.mybmtc.com/service/timings/gns/General%20Services" target="_blank" class="link">online schedule</a>),</p>
+
+    <ul class="info-list">
+        <li>BMTC Control Room: Telephone No: 080-2295-2522 / 2295-2422</li>
+        <li>BMTC, Kempegowda Bus Stand: Telephone No: 080-2295-2311 / 2295-2314</li>
+        <li>BMTC, Shivajinagar Bus Stand: Telephone No: 080-2295-2321 / 2295-2324</li>
+    </ul>
+
+    <h3 class="subsection-heading">BMTC Fares</h3>
+
+    <ul class="info-list">
+        <li>Starting fare: Rs. 150 (up to 10 km)</li>
+        <li>Max fare: Rs. 320 (over 35 km)</li>
+    </ul>
+</section> -->
+
+<!-- <section id="details">
+    <h2 class="wp-block-heading">Bengaluru Tourism</h2>
+
+
+
+    <p>Capital of the Southern state of Karnataka, Bengaluru today is Asia’s fastest growing cosmopolitan city. It is home to some of the most high tech industries in India. The I.T industry views Bengaluru as the ‘byte-basket’ of India. Bengaluru is also home to some of India’s premier scientific establishments. Blessed with a salubrious climate, gardens &amp; parks, natural lakes, architectural landmarks, shopping malls, the best restaurants and pubs in this part of the globe, business opportunities, Bengaluru is the ideal gateway to India and beyond. Bengaluru offers something for everyone-music and dance concerts (Western and Indian), dramas, exhibitions, carnivals, conferences and more.</p>
+
+
+
+    <p>Go disco-hopping or pub-crawling, shop till your feet give away,relax in the swankiest restaurants or with your favourite movie stars-in the movie hall or simply tee off to glory. Welcome to Bengaluru.</p>
+
+
+
+    <h3 class="wp-block-heading">Some Facts About Bengaluru</h3>
+
+
+
+    <ul>
+        <li>Geographical Location &#8211; Latitudinal parallels: 12 degree 8’ N Longitudinal meridians: 77 degree 37’ E</li>
+
+
+
+        <li>Climate &#8211; March to May (warmest months) December to January (coldest months) June to September (rainy &#8211; southwest monsoon) November to December (rainy &#8211; northeast monsoon)</li>
+
+
+
+        <li>Temperature &#8211; Highest maximum of 33 degree C to lowest minimum of 14 degree C</li>
+
+
+
+        <li>Language Regional Language: Kannada English, Hindi, Telugu and Tamil are widely spoken and understood</li>
+    </ul>
+
+
+
+    <h2 class="wp-block-heading">Local Sights</h2>
+
+
+
+    <h3 class="wp-block-heading">The Bengaluru Palace &amp; Fort</h3>
+
+
+    <div class="loc-image">
+        <figure class="alignright size-medium"><img decoding="async" src="https://demo.onlypixels.com/edm2023/wp-content/uploads/2022/11/edm-bluru-05-1-300x188.jpg"/>
+        </figure></div>
+
+
+    <p>The Bengaluru Fort was built by Kempe Gowda and expanded by Tippu Sultan. Within its walls is the well preserved 16th century Ganapathi Temple.</p>
+
+
+
+    <p>The Bengaluru Palace was built by a Wodeyar king in 1887 on the 400 acre space. Inspired by the Windsor castle, this palace was built in the Tudor style, complete with windows, foiled windows, battlements and turrets resembling the Daria Daulat Palace in Srirangapatanam, this summer palace has been constructed largely of wood and is famous for its carving and paintings.</p>
+
+
+
+    <p>In June 2005 Srikantadatta Narasimharaja Wodeyar decided to open the palace to the public to meet its Rs 20 lakh annual upkeep costs. The special attraction is a gallery of nearly a thousand historical photos, including those of viceroys, maharajas and other famous personalities inside and exquisite carvings and paintings.</p>
+
+
+
+    <h3 class="wp-block-heading">Lal Bagh</h3>
+
+
+    <div class="loc-image">
+        <figure class="alignright size-medium"><img decoding="async" src="https://demo.onlypixels.com/edm2023/wp-content/uploads/2022/11/edm-bluru-02-1-300x228.jpg"/>
+        </figure>
+    </div>
+
+
+    <p>Hyder Ali laid out this famous botanical garden and his son added horticultural wealth to them by importing trees and plants from several countries. The garden today houses over 1000 species of flora which include rare and enchanting collection of tropical plants, trees and herbs. The Glass House, modelled along London’s Crystal Palace, is the center of attraction in this 2400 acre park. Bi-annual flower shows attracting participants from all over India is held in the Glass House. In July, 2003 it was decded that the Department of Horticulture and Bengaluru Development Authority (BDA) would jointly take up the development of Lal Bagh Botanical Gardens.</p>
+
+
+
+    <h3 class="wp-block-heading">Cubbon Park</h3>
+
+
+
+    <p>This wooded and beflowered park was laid out in the heart of the cantonment in 1864. Since then, fairy fountains, an august bandstand and a wealth of atatury have been added. But the most important aspect of Cubbon Park is its newer buildings that have added beauty and cultural wealth. Lush green lawns, shady flowering trees, vibrant flower beds, make Cubbon park an ideal place for morning joggers and alike.</p>
+
+
+
+    <h3 class="wp-block-heading">Ravindra Kalakshetra</h3>
+
+
+
+    <p>The Kalakshetra, built to commemorate Rabindranath Tagore’s centenary, promotes cultural activity in the city. It has a superb theatre and houses the Cultural Akademi Offices. Next to it is the Gothic styled Puttannachetty Town Hall whose huge auditorium can easily accommodate over 1500 persons.</p>
+
+
+
+    <h3 class="wp-block-heading">Gandhi Bhavan</h3>
+
+
+
+    <p>The Gandhi Smarak Nidhi, housed in the Gandhi Bhavan, houses a comprehensive picture gallery and other exhibits of Gandhiji which depict the life and times of Gandhiji. The Bhavan is open on weekdays (10:30 Am to 5:00 PM).</p>
+
+
+
+    <h3 class="wp-block-heading">Ulsoor lake</h3>
+
+
+
+    <p>A picturesque lake with several tree-shaded islands in it, is an ideal picnic spot. You can go boating or go for a swim in the nearby swimming pool that is part of the recreational complex near the lake. You can also go to the nearby Gurdhwar, the largest Sikh shrine in Bengaluru.</p>
+
+
+
+    <h3 class="wp-block-heading">Vidhana Soudha</h3>
+
+
+    <div class="loc-image">
+        <figure class="alignright size-medium"><img decoding="async" src="https://demo.onlypixels.com/edm2023/wp-content/uploads/2022/11/edm-bluru-07-1-300x200.jpg" alt="" class="wp-image-578"/></figure></div>
+
+
+    <p>This splendid neo-Dravidian granite building that dominates the northern boundary of the Cubbon park, is the home of the State Legislature and the Secretariat. The massive sandalwood door of the Cabinet room is a spectacular feature of this imposing building. The Vidhana Soudha is bedecked in illuminated glory during special periods and is a sight worth viewing. The building is open for visitors only after 3 PM.</p>
+
+
+
+    <h3 class="wp-block-heading">The Bengaluru Race Course</h3>
+
+
+
+    <p>The Bengaluru Race Course is one of the finest in India, with racing events almost all year round (May to June and Nov to Mar). Some of the biggest field stakes in the country can be witnessed here.</p>
+
+
+
+    <h2 class="wp-block-heading">Around Bengaluru</h2>
+
+
+
+    <p>Several places of tourist interest are located within easy each from Bengaluru. Distance shown in brackets is from Bengaluru.</p>
+
+
+
+    <h3 class="wp-block-heading">Bannerghatta National Park (22 Km)</h3>
+
+
+
+    <p>Those interested in natural history can go to Bannerghatta. The park situated in picturesque surrounding has a wide variety of fauna. Among the attractions are crocodiles, picnic corner, serpentarium and pets corner, lion’s safari. On Dec 25, 2001 the govt announced plans of starting a butterfly park in Bannerghatta</p>
+
+
+
+    <h3 class="wp-block-heading">Tipu’s Palace</h3>
+
+
+
+    <p>Built in 1791, this beautiful two-storeyed ornate wooden structure with exquisitely carved pillars, arches and balconies was one of Tipu’s favourite summer retreats.</p>
+
+
+
+    <h3 class="wp-block-heading">Hesaragatta</h3>
+
+
+
+    <p>25 Kms away, Hesaragatta is an interesting picnic spot offering water sports to the adventurous. Boating and wind-surfing is the major attraction. It also has a dairy &amp; horticulture farm where you can picnic.</p>
+
+
+
+    <h3 class="wp-block-heading">Government Museum</h3>
+
+
+    <div class="loc-image">
+        <figure class="alignright size-medium"><img decoding="async" src="https://demo.onlypixels.com/edm2023/wp-content/uploads/2022/11/edm-bluru-09-1-300x173.jpg" alt="" class="wp-image-580"/></figure></div>
+
+
+    <p>One of the important buildings, the Government Museum is one of the oldest in India(1886). A special attraction here are the antiquities from Mohenjodaro period. Situated nearby the museum is Visveswaraya Industrial and Technological Museum named after the great engineer-statesman .</p>
+
+
+
+    <p>Next to the VITM is the Visveswaraya Industrial Trade Center, the first of its kind in India. In addition to its trade promotional activities, the Center has two exhibition floors housing a permanent display of all that is manufactured in Karnataka.</p>
+
+
+
+    <p>Near the Museum is the K.Venkatappa Art Gallery which has a permanent exhibition of the works of the great artist, K. Venkatappa. The Gallery does much to encourage art in the state.</p>
+
+
+
+    <p>Also in the Cubbon Park are the Seshadri Iyer Memorial Hall, which houses the public library, the <a href="http://www.kar.nic.in/hcourt/" target="_blank" rel="noreferrer noopener">High Court</a> and the Jawahar Bal Bhavan. The Bhavan, with its toy train, fairgrounds and theatre, is a recreational, hobby and educational centre for children.</p>
+
+
+
+    <h3 class="wp-block-heading">ISKCON</h3>
+
+
+    <div class="loc-image">
+        <figure class="alignright size-medium"><img decoding="async" src="https://demo.onlypixels.com/edm2023/wp-content/uploads/2022/11/edm-bluru-10-1-300x225.jpg"/>
+        </figure>
+    </div>
+
+
+    <p>Situated on Chord Road, it is a must visit temple in Bengaluru. It stands over a small hill and is a very clean and well maintained temple. <a href="http://www.akshayapatra.org/" target="_blank" rel="noreferrer noopener">Akshaya Patra</a> program sponsored by the temple is very popular.</p>
+
+
+
+    <h3 class="wp-block-heading">Janapada Loka</h3>
+
+
+
+    <p>Sprawling across 15 acres, Janapada Loka or “Folk-culture World” is a world of simplicity and art.Janapada Loka, a subsidiary of the Karnataka Janapada Parishath, is dedicated to preserve and promote folk art and culture. The complex has an art gallery, an open-air theatre, a studio and a museum. Janapada Loka is located near Ramanagaram and is 53 Kms away from Bengaluru.</p>
+
+
+
+    <h3 class="wp-block-heading">Channapatna</h3>
+
+
+
+    <p>A bustling town, 60 kms south-west from Bengaluru, Channapatna is famous for its eye-catching lacquer ware and hand-crafted wooden toys. It is also a major silk centre of Karnataka.</p>
+
+
+
+    <h3 class="wp-block-heading">Mekedatu</h3>
+
+
+
+    <p>Gushing waters, imposing landscapes, and untouched picnic spots is what Mekedatu is all about. The Cauvery river squeezing through a narrow gorge before traversing its south-bound terrain is a breathtaking sight .It is 98 Kms south of Bengaluru.</p>
+
+
+
+    <h3 class="wp-block-heading">Nandi Hills</h3>
+
+
+    <div class="loc-image">
+        <figure class="alignright size-medium"><img decoding="async" src="https://demo.onlypixels.com/edm2023/wp-content/uploads/2022/11/edm-bluru-11-1-300x200.jpg"/>
+        </figure>
+    </div>
+
+
+    <p>One of the popular retreats of Tipu Sultan, the Tiger of Mysore, Nandi Hills offers breathtaking getaway of the weary tourist. Tipu’s Drop, a 600m high cliff face provides a magnificent panoramic view of the beautiful terrain. Nandi Hills is 60 Kms north of Bengaluru. Other attractions are Tipu’s Drop, Yoga Nandishvara Temple, a beautiful Chola temple, Dravidian-style Bhoganandishvara temple and Muddenahalli, hometown of Sir M. Visvesvaraya, architect of modern Karnataka at the base of the hill.</p>
+
+
+
+    <p>In March 2005 the Toursim department decided to make Nandi Hills a popular destination by introducing a 5-star hotel, ropeway and para-sailing facility.</p>
+
+
+
+    <h2 class="wp-block-heading">Heritage sites near Bengaluru</h2>
+
+
+
+    <p>Bengaluru is within 4 hours travel distance (by road) of some of India’s most prestigious heritage sites</p>
+
+
+
+    <ul>
+        <li><strong>Mysuru Lalit Mahal Palace – 3 Hours from Bengaluru </strong></li>
+
+
+
+        <li><strong>Halebidu Temple&nbsp; &#8211; 4 hours from Bengaluru </strong></li>
+
+
+
+        <li><strong>Belur Temple&nbsp; &#8211; 4 hours from Bengaluru </strong></li>
+    </ul>
+</section> -->
+
+
+<section id="details">
+    <h2>Other Essentials</h2>
+    <h3>Local Sim Card</h3>
+
+    The workshop venue will be equipped with reliable Wi-Fi to ensure a seamless experience
+    throughout the event. However, please note that public locations across India may not always
+    offer Wi-Fi access. To stay connected during your stay, attendees may want to purchase a local
+    SIM card upon arrival. The two major carriers, <a href="https://www.airtel.in/">Airtel</a> and
+    <a href="https://www.jio.com/">Jio</a>, offer affordable prepaid plans starting at
+    approximately ₹300 per month, which include unlimited calling and around 1.5GB of data per day.
+    You can conveniently obtain a SIM card at the airport, from various outlets around the country,
+    or go with the eSIM option for added convenience. Some documents you will need for obtaining a
+    sim card are:
+
+    <ul>
+        <li>Passport, and a photocopy of the personal details page</li>
+        <li>Valid Indian Visa and a photocopy of that (Passport and visa stamp should work)</li>
+        <li>Passport size photograph</li>
+    </ul>
+
+    Note that additional documents might be required too. For additional information and experience
+    of a few travelers you can refer to the following
+    <a href="https://www.reddit.com/r/bangalore/comments/11rmdxi/sim_card_for_foreigner/">reddit discussion page.</a>
+    
+    
+    <h3>Money Changers</h3>
+    <p>Given below is a list of some moneychangers in Bengaluru.</p>
+    <ol>
+        <li><strong>Synergy</strong>
+            <ul>
+                <li>107, Raheja Plaza 17, Commissariat Road, D’Souza Circle</li>
+                <li>Ph: 080-5587931/080-5300996</li>
+                <li>Fax: 080-5587931</li>
+                <li>7 days a week. Timings: 0930-1930 hrs.</li>
+            </ul>
+        </li>
+        <li><strong>Pheroze Framroze &amp; Co.</strong>
+            <ul>
+                <li>G-2, Richmond Plaza Richmond Circle, Raja Ram Mohan Roy Road</li>
+                <li>Ph: 080-2227194, 080-2211025</li>
+                <li>Fax: 080-2211064</li>
+                <li>Timings: 0930-1900 hrs.</li>
+                <li>Sunday till 1300 hrs.</li>
+            </ul>
+        </li>
+        <li><strong>Thomas Cook</strong>
+            <ul>
+                <li>70, M. G. Road</li>
+                <li>Ph: 080-5581337</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>Tourist Attractions</h3>
+
+    Bangalore has many diverse attractions to offer beyond its professional charm. Stroll
+    through the expansive Lalbagh Botanical Garden and Cubbon Park to enjoy lush greenery and
+    serene environments. Explore the majestic Bangalore Palace and Tipu Sultan's Summer Palace to
+    dive into the city's regal past. For a vibrant shopping experience, wander through Commercial
+    Street and Krishna Rajendra Market. Art aficionados should not miss the National Gallery of
+    Modern Art, while food enthusiasts can indulge in a culinary journey from traditional South
+    Indian fare to innovative international cuisine. For those with a taste for adventure, a short
+    drive will take you to the picturesque Nandi Hills or the historic temples of Hampi, providing
+    a perfect blend of relaxation and exploration during your stay.
+
+</section>
+        <p><em>Some of the information on the page is credited to https://www.aimlsystems.org/2022/visitingBangalore</em></p>
+        </div>
+        </div>
+        </main>
+        <footer>
+            <p>&copy; 2025 Algorithms group at IISc</p>
+        </footer>
+
+        <script>
+        // Mobile header scroll behavior
+        function handleMobileScroll() {
+            const isPortraitMobile = window.innerWidth <= 720;
+            const isLandscapeMobile = window.innerWidth <= 1024 && window.innerHeight <= 600;
+            
+            if (isPortraitMobile || isLandscapeMobile) {
+                const header = document.querySelector('header');
+                const headerContent = document.querySelector('.header-content');
+                const supportText = document.querySelector('header strong');
+                const nav = document.querySelector('nav');
+                const main = document.querySelector('main');
+                
+                if (window.scrollY > 25) {
+                    if (isLandscapeMobile) {
+                        header.classList.add('scrolled');
+                    }
+                    headerContent.classList.add('scrolled');
+                    supportText.classList.add('scrolled');
+                    nav.classList.add('scrolled');
+                    main.style.marginTop = '80px'; // Adjust main margin when scrolled
+                } else {
+                    if (isLandscapeMobile) {
+                        header.classList.remove('scrolled');
+                    }
+                    headerContent.classList.remove('scrolled');
+                    supportText.classList.remove('scrolled');
+                    nav.classList.remove('scrolled');
+                    main.style.marginTop = '160px'; // Reset main margin
+                }
+            }
+        }            // Add scroll event listener
+            window.addEventListener('scroll', handleMobileScroll);
+            window.addEventListener('resize', handleMobileScroll); // Handle orientation changes
+            
+            // Initial check
+            handleMobileScroll();
+        </script>
+    </body>
+</html>

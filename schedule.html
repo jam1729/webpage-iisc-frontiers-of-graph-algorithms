@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontiers of Graph Algorithms - Schedule</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$','$'], ['\\(','\\)']],
+                processEscapes: true
+            }
+        });
+    </script>
+    <!-- src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMQL"> -->
+</head>
+
+<body id="top">
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="https://www.csa.iisc.ac.in/newweb/wp-content/uploads/2019/12/csa-logo-color.png" alt="Logo"
+                    class="logo">
+            </div>
+            <h1>Frontiers of Graph Algorithms</h1>
+            <div class="logo-container">
+                <img src="images/IIScLogo.png" alt="Logo" class="logo">
+            </div>
+        </div>
+        <strong>Supported by the <a href="https://www.csa.iisc.ac.in/cfe-walmart/">Walmart Center for Tech
+                Excellence.</a></strong>
+        <nav>
+            <ul>
+                <li><a href="index.html#speakers">Speakers</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="location.html">Location</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="schedule">
+            <br>
+            <h2>Schedule</h2>
+            <style type="text/css">
+                .tg {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    table-layout: fixed;
+                    width: 100%;
+                }
+
+                /* Column width specifications - making time columns narrower */
+                .tg th:nth-child(1),
+                .tg td:nth-child(1) {
+                    width: 25%;
+                    /* Session column - very narrow */
+                }
+
+                .tg th:nth-child(2),
+                .tg td:nth-child(2) {
+                    width: 8%;
+                    /* Time column - narrow for better space utilization */
+                }
+
+                .tg th:nth-child(3),
+                .tg td:nth-child(3) {
+                    width: 67%;
+                    /* Event column - maximize space for content */
+                }
+
+                .tg td {
+                    border-color: black;
+                    border-style: solid;
+                    border-width: 1px;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    overflow: hidden;
+                    padding: 10px 5px;
+                    word-break: normal;
+                }
+
+                .tg th {
+                    border-color: black;
+                    border-style: solid;
+                    border-width: 1px;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    font-weight: normal;
+                    overflow: hidden;
+                    padding: 10px 5px;
+                    word-break: normal;
+                }
+
+                .tg .tg-lboi {
+                    border-color: inherit;
+                    text-align: left;
+                    vertical-align: middle;
+                    padding: 6px 10px;
+                    /* Reduced padding for session labels */
+                    font-size: 14px;
+                    /* Increased to match event columns */
+                    line-height: 1.2;
+                    word-wrap: break-word;
+                }
+
+                .tg .tg-c3ow {
+                    border-color: inherit;
+                    text-align: center;
+                    vertical-align: top;
+                    border-top: 4px solid #000;
+                    border-bottom: 2px solid #000;
+                    background-color: #f8f9fa;
+                    font-weight: bold;
+                    padding: 12px 8px;
+                }
+
+                .tg .tg-day-spacer {
+                    border: none;
+                    height: 20px;
+                    background-color: transparent;
+                }
+
+                .tg .tg-0pky {
+                    border-color: inherit;
+                    text-align: left;
+                    vertical-align: middle;
+                    /* Changed to middle for vertical centering */
+                    padding: 6px 4px;
+                    /* Reduced padding for time cells */
+                    font-size: 14px;
+                    /* Increased to match event columns */
+                    white-space: nowrap;
+                    /* Prevent time text from wrapping */
+                    font-weight: 500;
+                }
+
+                .tg .tg-collaboration {
+                    border-color: inherit;
+                    text-align: left;
+                    vertical-align: top;
+                    background-color: #e3f2fd;
+                }
+
+                .tg .tg-break {
+                    border-color: inherit;
+                    text-align: center;
+                    vertical-align: top;
+                    background-color: #f5f5f5;
+                }
+
+                .tg .tg-open-problem {
+                    border-color: inherit;
+                    text-align: left;
+                    vertical-align: top;
+                    background-color: #f3e5f5;
+                }
+
+                .tg .tg-speaker {
+                    border-color: inherit;
+                    text-align: left;
+                    vertical-align: top;
+                    background-color: #e8f5e8;
+                }
+
+                .day-navigation {
+                    border-top: 1px solid #e9ecef;
+                    border-bottom: 1px solid #e9ecef;
+                    padding: 12px 0;
+                    margin: 15px 0;
+                    text-align: center;
+                }
+
+                .day-nav-links {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 2px;
+                }
+
+                .day-nav-link {
+                    background-color: #f8f9fa;
+                    color: #495057;
+                    text-decoration: none;
+                    padding: 6px 14px;
+                    border: 1px solid #dee2e6;
+                    font-weight: 400;
+                    font-size: 14px;
+                    transition: all 0.2s ease;
+                    border-radius: 0;
+                }
+
+                .day-nav-link:hover {
+                    background-color: #e9ecef;
+                    border-color: #adb5bd;
+                    text-decoration: none;
+                    color: #212529;
+                }
+
+                .day-nav-link:focus {
+                    outline: 1px solid #80bdff;
+                    outline-offset: 1px;
+                }
+
+                .day-nav-link.back-to-top {
+                    background-color: #495057;
+                    color: white;
+                    border-color: #495057;
+                }
+
+                .day-nav-link.back-to-top:hover {
+                    background-color: #343a40;
+                    border-color: #343a40;
+                    color: white;
+                }
+
+                @media (max-width: 768px) {
+                    .day-nav-links {
+                        gap: 1px;
+                    }
+
+                    .day-nav-link {
+                        flex: 1;
+                        min-width: 80px;
+                        text-align: center;
+                    }
+
+                    /* Mobile scroll behavior styles */
+                    .header-content.scrolled {
+                        transform: translateY(-100%);
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all 0.3s ease;
+                    }
+
+                    header strong.scrolled {
+                        transform: translateY(-100%);
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all 0.3s ease;
+                    }
+
+                    nav.scrolled {
+                        padding: 0.3em 0;
+                        transition: all 0.3s ease;
+                    }
+
+                    nav.scrolled ul li a {
+                        padding: 4px 8px;
+                        font-size: 12px;
+                        margin: 0 8px;
+                        transition: all 0.3s ease;
+                    }
+
+                    /* Mobile-friendly table layout */
+                    .tg {
+                        table-layout: auto;
+                        font-size: 13px;
+                    }
+
+                    /* Hide table headers on mobile */
+                    .tg thead {
+                        display: none;
+                    }
+
+                    /* Make table rows display as cards */
+                    .tg tbody tr {
+                        display: block;
+                        margin-bottom: 15px;
+                        border: 1px solid #ddd;
+                        border-radius: 8px;
+                        padding: 12px;
+                        background: white;
+                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    }
+
+                    /* Day headers - keep as full width */
+                    .tg tbody tr:has(.tg-c3ow) {
+                        display: table-row;
+                        margin-bottom: 10px;
+                        border: none;
+                        border-radius: 0;
+                        padding: 0;
+                        box-shadow: none;
+                        background: transparent;
+                    }
+
+                    .tg tbody tr:has(.tg-c3ow) td {
+                        display: table-cell;
+                    }
+
+                    /* Day spacers */
+                    .tg tbody tr:has(.tg-day-spacer) {
+                        display: table-row;
+                        margin: 0;
+                        border: none;
+                        padding: 0;
+                        box-shadow: none;
+                        background: transparent;
+                    }
+
+                    .tg tbody tr:has(.tg-day-spacer) td {
+                        display: table-cell;
+                    }
+
+                    /* Transform regular cells into card format */
+                    .tg tbody tr:not(:has(.tg-c3ow)):not(:has(.tg-day-spacer)) td {
+                        display: block;
+                        text-align: left !important;
+                        border: none !important;
+                        padding: 4px 0 !important;
+                        width: 100% !important;
+                    }
+
+                    /* Session labels */
+                    .tg .tg-lboi {
+                        font-weight: bold;
+                        color: #2c5aa0;
+                        font-size: 16px;
+                        margin-bottom: 8px;
+                        padding-bottom: 8px;
+                        border-bottom: 2px solid #e9ecef;
+                    }
+
+                    /* Time cells */
+                    .tg .tg-0pky {
+                        font-weight: 600;
+                        color: #495057;
+                        font-size: 14px;
+                        margin-bottom: 4px;
+                    }
+
+                    .tg .tg-0pky:before {
+                        content: "🕐 ";
+                        margin-right: 4px;
+                    }
+
+                    /* Speaker and event cells */
+                    .tg .tg-speaker,
+                    .tg .tg-collaboration,
+                    .tg .tg-open-problem {
+                        font-size: 15px;
+                        line-height: 1.4;
+                        padding: 8px 12px !important;
+                        border-radius: 6px;
+                        margin-top: 4px;
+                    }
+
+                    .tg .tg-speaker {
+                        background-color: #e8f5e8 !important;
+                        border-left: 4px solid #4caf50;
+                    }
+
+                    .tg .tg-collaboration {
+                        background-color: #e3f2fd !important;
+                        border-left: 4px solid #2196f3;
+                    }
+
+                    .tg .tg-open-problem {
+                        background-color: #f3e5f5 !important;
+                        border-left: 4px solid #9c27b0;
+                    }
+
+                    /* Break cells */
+                    .tg .tg-break {
+                        background-color: #f8f9fa !important;
+                        border: 2px solid #dee2e6;
+                        border-radius: 6px;
+                        padding: 12px !important;
+                        text-align: center !important;
+                        font-weight: 600;
+                        color: #6c757d;
+                        margin: 8px 0;
+                    }
+
+                    /* Lunch breaks */
+                    .tg .tg-lunch-break {
+                        background-color: #d4edda !important;
+                        border: 2px solid #28a745 !important;
+                        color: #155724 !important;
+                    }
+                }
+
+                /* Landscape mobile orientation */
+                @media (max-width: 1024px) and (max-height: 600px) and (orientation: landscape) {
+                    header {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: 1000;
+                        background: white;
+                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .header-content {
+                        padding: 8px 20px !important;
+                    }
+
+                    .header-content h1 {
+                        font-size: 18px !important;
+                        margin: 4px 0 !important;
+                    }
+
+                    .logo {
+                        height: 30px !important;
+                    }
+
+                    header strong {
+                        font-size: 12px !important;
+                        padding: 4px 20px !important;
+                    }
+
+                    nav ul {
+                        padding: 4px 20px !important;
+                    }
+
+                    nav ul li a {
+                        padding: 4px 12px !important;
+                        font-size: 14px !important;
+                    }
+
+                    main {
+                        margin-top: 120px !important;
+                        padding: 10px !important;
+                    }
+
+                    .day-navigation {
+                        margin: 10px 0 !important;
+                    }
+
+                    .day-nav-link {
+                        padding: 6px 8px !important;
+                        font-size: 13px !important;
+                    }
+
+                    /* Compact cards for landscape */
+                    .tg tbody tr:not(:has(.tg-c3ow)):not(:has(.tg-day-spacer)) {
+                        margin-bottom: 8px !important;
+                        padding: 8px !important;
+                    }
+
+                    .tg .tg-lboi {
+                        font-size: 14px !important;
+                        margin-bottom: 4px !important;
+                        padding-bottom: 4px !important;
+                    }
+
+                    .tg .tg-0pky {
+                        font-size: 12px !important;
+                        margin-bottom: 2px !important;
+                    }
+
+                    .tg .tg-speaker,
+                    .tg .tg-collaboration,
+                    .tg .tg-open-problem {
+                        font-size: 13px !important;
+                        line-height: 1.3 !important;
+                        padding: 6px 8px !important;
+                    }
+                }
+            </style>
+            <div class="day-navigation">
+                <div class="day-nav-links">
+                    <a href="#day1" class="day-nav-link">Day 1</a>
+                    <a href="#day2" class="day-nav-link">Day 2</a>
+                    <a href="#day3" class="day-nav-link">Day 3</a>
+                    <a href="#day4" class="day-nav-link">Day 4</a>
+                    <a href="#day5" class="day-nav-link">Day 5</a>
+                </div>
+            </div>
+            <table class="tg">
+                <thead>
+                    <tr>
+                        <th class="tg-0pky">Session</th>
+                        <th class="tg-0pky">Time</th>
+                        <th class="tg-0pky">Event</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="day1">
+                        <td class="tg-c3ow" colspan="3"><b>Day 1 - December 8th</b></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-lboi" rowspan="4">Day 1 Morning<br>
+                            <!-- Geometric Packing<br><br>Chair: TBD -->
+                        </td>
+                        <!-- <td class="tg-0pky">0915</td>
+    <td class="tg-0pky">Inauguration by Rajesh Sundaresan (Dean, EECS)</td> -->
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">0930 - 1030</td>
+                        <td class="tg-speaker">Thatchaphol Saranurak (1)</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-break" colspan="2">Coffee Break (1030 - 1100)</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1100 - 1200</td>
+                        <td class="tg-speaker">Thatchaphol Saranurak (2)</td>
+                    </tr>
+
+                    <!-- <tr>
+    <td class="tg-0pky">1120 - 1150</td>
+    <td class="tg-speaker">Mathieu Mari - <a href="schedule.html#mathieu">Piercing rectangles online: the pseudo-disk case</a></td>
+  </tr> -->
+
+                    <tr>
+                        <td class="tg-break" colspan="3">Lunch (1200 - 1330)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="tg-lboi" rowspan="5">Day 1 Afternoon
+                            <!-- <br>Fréchet and Fun
+      <br><br>Chair: Aditi Sethia</td> -->
+                        </td>
+                    <tr>
+                        <td class="tg-0pky">1330 - 1500</td>
+                        <td class="tg-collaboration">Collaboration Time</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1500 - 1600<br></td>
+                        <td class="tg-speaker">Jaikumar Radhakrishnan</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-break" colspan="2">Coffee Break (1600 - 1645)</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1645 - 1730</td>
+                        <td class="tg-speaker">Sagnik Mukhopadhyay</td>
+                    </tr>
+
+                    <tr>
+                        <td class="tg-day-spacer" colspan="3"></td>
+                    </tr>
+                    <tr id="day2">
+                        <td class="tg-c3ow" colspan="3"><b>Day 2 - December 9th</b></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-lboi" rowspan="4">Day 2 Morning<br>
+                            <!-- Geometric Packing<br><br>Chair: TBD -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">0930 - 1030</td>
+                        <td class="tg-speaker">Greg Bodwin (1)</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-break" colspan="2">Coffee Break (1030 - 1100)</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1100 - 1200</td>
+                        <td class="tg-speaker">Greg Bodwin (2)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="tg-break" colspan="3">Lunch (1200 - 1330)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="tg-lboi" rowspan="7">Day 2 Afternoon
+                            <!-- <br>Fréchet and Fun
+      <br><br>Chair: Aditi Sethia</td> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1330 - 1430</td>
+                        <td class="tg-collaboration">Collaboration Time</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1430 - 1515<br></td>
+                        <td class="tg-speaker">Anupam Gupta</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1515 - 1600<br></td>
+                        <td class="tg-speaker">Manoj Gupta: <a href="#manoj-gupta">Improved 2-Approximate Shortest Paths
+                                for close vertex pairs</a></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-break" colspan="2">Coffee Break (1600 - 1645)</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1645 - 1730</td>
+                        <td class="tg-speaker">Saket Saurabh</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1645 - 1730</td>
+                        <td class="tg-open-problem">Open Problem Discussion</td>
+                    </tr>
+
+                    <tr>
+                        <td class="tg-day-spacer" colspan="3"></td>
+                    </tr>
+                    <tr id="day3">
+                        <td class="tg-c3ow" colspan="3"><b>Day 3 - December 10th</b></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-lboi" rowspan="4">Day 3 Morning<br>
+                            <!-- Geometric Packing<br><br>Chair: TBD -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">0930 - 1030</td>
+                        <td class="tg-speaker">Sanjeev Khanna :<a href="#sanjeev-khanna">Fully Dynamic Matching,
+                                Matching Sparsifiers, and Ruzsa-Szemerédi Graphs</a></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-break" colspan="2">Coffee Break (1030 - 1100)</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1100 - 1200</td>
+                        <td class="tg-speaker">Deeparnab Chakrabarty</td>
+                    </tr>
+
+                    <tr>
+                        <td class="tg-break" colspan="3">Lunch (1200 - 1330)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="tg-lboi" rowspan="6">Day 3 Afternoon
+                            <!-- <br>Fréchet and Fun
+      <br><br>Chair: Aditi Sethia</td> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1330 - 1430</td>
+                        <td class="tg-open-problem">Industry Panel</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1430 - 1515<br></td>
+                        <td class="tg-break">Break</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1515 - 1600<br></td>
+                        <td class="tg-speaker">Naveen Garg</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-break" colspan="2">Coffee Break (1600 - 1645)</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1645 - 1730</td>
+                        <td class="tg-speaker">Arkadev Chattopadhyay</td>
+                    </tr>
+
+                    <tr>
+                        <td class="tg-day-spacer" colspan="3"></td>
+                    </tr>
+                    <tr id="day4">
+                        <td class="tg-c3ow" colspan="3"><b>Day 4 - December 11th</b></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-lboi" rowspan="4">Day 4 Morning<br>
+                            <!-- Geometric Packing<br><br>Chair: TBD -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">0930 - 1030</td>
+                        <td class="tg-speaker">Danupon Nanongkai</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-break" colspan="2">Coffee Break (1030 - 1100)</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1100 - 1200</td>
+                        <td class="tg-speaker">Debmalya Panigrahi</td>
+                    </tr>
+
+                    <tr>
+                        <td class="tg-break" colspan="3">Lunch (1200 - 1330)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="tg-lboi" rowspan="6">Day 4 Afternoon
+                            <!-- <br>Fréchet and Fun
+      <br><br>Chair: Aditi Sethia</td> -->
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="tg-0pky">1330 - 1500</td>
+                        <td class="tg-collaboration">Collaboration Time</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1500 - 1600<br></td>
+                        <td class="tg-speaker">Amit Chakrabarti</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-break" colspan="2">Coffee Break (1600 - 1645)</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1645 - 1730</td>
+                        <td class="tg-speaker">Kavitha Telikepalli</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1645 - 1730</td>
+                        <td class="tg-open-problem">Panel: Future of graph algorithms</td>
+                    </tr>
+
+                    <tr>
+                        <td class="tg-day-spacer" colspan="3"></td>
+                    </tr>
+                    <tr id="day5">
+                        <td class="tg-c3ow" colspan="3"><b>Day 5 - December 12th</b></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-lboi" rowspan="4">Day 5 Morning<br>
+                            <!-- Geometric Packing<br><br>Chair: TBD -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">0930 - 1030</td>
+                        <td class="tg-speaker">Sayan Bhattacharya</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-break" colspan="2">Coffee Break (1030 - 1100)</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1100 - 1200</td>
+                        <td class="tg-speaker">Barna Saha</td>
+                    </tr>
+
+                    <tr>
+                        <td class="tg-break" colspan="3">Lunch (1200 - 1330)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="tg-lboi" rowspan="6">Day 5 Afternoon
+                            <!-- <br>Fréchet and Fun
+      <br><br>Chair: Aditi Sethia</td> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1330 - 1415</td>
+                        <td class="tg-collaboration">Collaboration Time</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1415 - 1500<br></td>
+                        <td class="tg-speaker">Amit Kumar</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1500 - 1600<br></td>
+                        <td class="tg-speaker">Surender Baswana</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-break" colspan="2">Coffee Break (1600 - 1645)</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky">1645 - 1730</td>
+                        <td class="tg-speaker">Keerti Choudhary</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="day-navigation">
+                <div class="day-nav-links">
+                    <a href="#day1" class="day-nav-link">Day 1</a>
+                    <a href="#day2" class="day-nav-link">Day 2</a>
+                    <a href="#day3" class="day-nav-link">Day 3</a>
+                    <a href="#day4" class="day-nav-link">Day 4</a>
+                    <a href="#day5" class="day-nav-link">Day 5</a>
+                    <a href="#top" class="day-nav-link back-to-top">Back to Top</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule">
+            <h2>Titles and Abstracts</h2>
+            <ul>
+                <li id="manoj-gupta"><strong>Manoj Gupta</strong>
+                    <p><strong>Title:</strong> Improved 2-Approximate Shortest Paths for close vertex pairs</p>
+                    <p><strong>Abstract:</strong> An influential result by Dor, Halperin, and Zwick (FOCS 1996, SICOMP
+                        2000) implies an algorithm that can compute approximate shortest paths for all vertex pairs in
+                        $\tilde{O}(n^{2+O(1/k)})$ time, ensuring that the output distance is at most twice the actual
+                        shortest path, provided the pairs are at least $k$ apart, where $k \geq 2$. We present the first
+                        improvement on this result in over 25 years. Our algorithm achieves roughly same
+                        $\tilde{O}(n^{2+1/k})$ runtime but applies to vertex pairs merely $O(\log k)$ apart, where $\log
+                        k \geq 1$. When $k = \log n$, the running time of our algorithm is $\tilde{O}(n^2)$ and it works
+                        for all pairs at least $O(\log \log n)$ apart. Our algorithm is combinatorial, randomized, and
+                        returns correct results for all pairs with a high probability.</p>
+                </li>
+                <li id="sanjeev-khanna"><strong>Sanjeev Khanna</strong>
+                    <p><strong>Title:</strong> Fully Dynamic Matching, Matching Sparsifiers, and Ruzsa-Szemerédi Graphs
+                    </p>
+                    <p><strong>Abstract:</strong> The fully dynamic matching problem involves efficiently maintaining a
+                        near-optimal matching in a graph undergoing edge insertions and deletions. Despite significant
+                        effort, the goal of designing highly efficient fully dynamic matching algorithms has remained
+                        elusive. A promising natural approach toward faster algorithms is to maintain a matching
+                        sparsifier — a sparse subgraph that approximately preserves large matchings in every
+                        vertex-induced subgraph of the original graph. The success of this approach hinges on resolving
+                        two key challenges: proving the existence of sparse matching sparsifiers and designing efficient
+                        algorithms to construct them.
+
+                        As it turns out, both challenges are intimately connected to the question of determining the
+                        density of Ruzsa–Szemerédi (RS) graphs, namely graphs whose edges can be partitioned into
+                        induced matchings of linear size. This talk will explore the fascinating interplay between these
+                        ideas and show how this connection has led to a conditional “dream result” for fully dynamic
+                        matching.</p>
+                </li>
+
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Algorithms group at IISc</p>
+    </footer>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+        };
+
+        // Mobile header scroll behavior
+        function handleMobileScroll() {
+            const isPortraitMobile = window.innerWidth <= 720;
+            const isLandscapeMobile = window.innerWidth <= 1024 && window.innerHeight <= 600;
+
+            if (isPortraitMobile || isLandscapeMobile) {
+                const header = document.querySelector('header');
+                const headerContent = document.querySelector('.header-content');
+                const supportText = document.querySelector('header strong');
+                const nav = document.querySelector('nav');
+                const main = document.querySelector('main');
+
+                if (window.scrollY > 25) {
+                    if (isLandscapeMobile) {
+                        header.classList.add('scrolled');
+                    }
+                    headerContent.classList.add('scrolled');
+                    supportText.classList.add('scrolled');
+                    nav.classList.add('scrolled');
+                    main.style.marginTop = '80px'; // Adjust main margin when scrolled
+                } else {
+                    if (isLandscapeMobile) {
+                        header.classList.remove('scrolled');
+                    }
+                    headerContent.classList.remove('scrolled');
+                    supportText.classList.remove('scrolled');
+                    nav.classList.remove('scrolled');
+                    main.style.marginTop = '160px'; // Reset main margin
+                }
+            }
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleMobileScroll);
+        window.addEventListener('resize', handleMobileScroll); // Handle orientation changes
+
+        // Initial check
+        handleMobileScroll();
+    </script>
+</body>
+
+</html>
