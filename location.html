@@ -6,6 +6,7 @@
     <title>Frontiers of Graph Algorithms - Bengaluru</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="config.js"></script>
 </head>
     <body>
         <header>
@@ -69,30 +70,48 @@
     <div class="tab-contents">
         <div id="tab-mainguesthouse" class="tab-content">
             <div class="map-container">
-                <iframe width="100%" height="100%" style="border:0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBAM2o7PiQqwk15LC1XRH2e_KJ-jUa7KYk&zoom=11&maptype=roadmap&q=Main+Guest+House" title="Google map of Main Guest House"></iframe>
+                <iframe width="100%" height="100%" style="border:0" loading="lazy" id="map-mainguesthouse" title="Google map of Main Guest House"></iframe>
             </div>
         </div>
         <div id="tab-centenaryvisitorshouse" class="tab-content">
             <div class="map-container">
-                <iframe width="100%" height="100%" style="border:0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBAM2o7PiQqwk15LC1XRH2e_KJ-jUa7KYk&zoom=11&maptype=roadmap&q=Centenary+Visitors+House" title="Google map of Centenary Visitors House"></iframe>
+                <iframe width="100%" height="100%" style="border:0" loading="lazy" id="map-centenaryvisitorshouse" title="Google map of Centenary Visitors House"></iframe>
             </div>
         </div>
         <div id="tab-hoysalaguesthouse" class="tab-content">
             <div class="map-container">
-                <iframe width="100%" height="100%" style="border:0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBAM2o7PiQqwk15LC1XRH2e_KJ-jUa7KYk&zoom=11&maptype=roadmap&q=Hoysala+Guest+House" title="Google map of Hoysala Guest House"></iframe>
+                <iframe width="100%" height="100%" style="border:0" loading="lazy" id="map-hoysalaguesthouse" title="Google map of Hoysala Guest House"></iframe>
             </div>
         </div>
         <div id="tab-jawaharvisitorshouse" class="tab-content">
             <div class="map-container">
-                <iframe width="100%" height="100%" style="border:0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBAM2o7PiQqwk15LC1XRH2e_KJ-jUa7KYk&zoom=11&maptype=roadmap&q=Jawahar+Visitors+House" title="Google map of Jawahar Visitors House"></iframe>
+                <iframe width="100%" height="100%" style="border:0" loading="lazy" id="map-jawaharvisitorshouse" title="Google map of Jawahar Visitors House"></iframe>
             </div>
         </div>
         <div id="tab-greenpathecohotel" class="tab-content">
             <div class="map-container">
-                <iframe width="100%" height="100%" style="border:0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBAM2o7PiQqwk15LC1XRH2e_KJ-jUa7KYk&zoom=11&maptype=roadmap&q=Green+Path+Eco+Hotel" title="Google map of Green Path Eco Hotel"></iframe>
+                <iframe width="100%" height="100%" style="border:0" loading="lazy" id="map-greenpathecohotel" title="Google map of Green Path Eco Hotel"></iframe>
             </div>
         </div>
     </div>
+    
+    <script>
+        // Load maps with API key from config
+        const maps = [
+            { id: 'map-mainguesthouse', query: 'Main+Guest+House' },
+            { id: 'map-centenaryvisitorshouse', query: 'Centenary+Visitors+House' },
+            { id: 'map-hoysalaguesthouse', query: 'Hoysala+Guest+House' },
+            { id: 'map-jawaharvisitorshouse', query: 'Jawahar+Visitors+House' },
+            { id: 'map-greenpathecohotel', query: 'Green+Path+Eco+Hotel' }
+        ];
+        
+        maps.forEach(map => {
+            const iframe = document.getElementById(map.id);
+            if (iframe && typeof config !== 'undefined') {
+                iframe.src = `https://www.google.com/maps/embed/v1/place?key=${config.googleMapsApiKey}&zoom=11&maptype=roadmap&q=${map.query}`;
+            }
+        });
+    </script>
 </section> -->
 
 
