@@ -221,6 +221,15 @@
                     color: white;
                 }
 
+                .abstract-list li {
+                    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+                }
+
+                .abstract-highlight {
+                    background-color: #fff5cc;
+                    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.4);
+                }
+
                 @media (max-width: 768px) {
                     .day-nav-links {
                         gap: 1px;
@@ -624,12 +633,12 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="tg-0pky">1330 - 1430</td>
-                        <td class="tg-open-problem">Industry Panel</td>
+                        <td class="tg-0pky">1330 - 1415</td>
+                        <td class="tg-open-problem">Panel: Future of graph algorithms</td>
                     </tr>
                     <tr>
-                        <td class="tg-0pky">1430 - 1515<br></td>
-                        <td class="tg-break">Break</td>
+                        <td class="tg-0pky">1415 - 1515</td>
+                        <td class="tg-open-problem">PhD Students' Presentations</td>
                     </tr>
                     <tr>
                         <td class="tg-0pky">1515 - 1600<br></td>
@@ -691,11 +700,7 @@
     <tr>
         <td class="tg-0pky">1645 - 1730</td>
         <td class="tg-speaker">Kavitha Telikepalli: <a href="#kavitha-telikepalli">Assignments, Arborescences, and Popularity</a></td>
-    </tr>
-    <tr>
-        <td class="tg-0pky">1730 - 1815</td>
-        <td class="tg-open-problem">Panel: Future of graph algorithms</td>
-    </tr>                    <tr>
+    </tr>                   <tr>
                         <td class="tg-day-spacer" colspan="3"></td>
                     </tr>
                     <tr id="day5">
@@ -707,8 +712,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="tg-0pky">0930 - 1030</td>
-                        <td class="tg-open-problem">PhD Students' Presentations</td>
+                        <td class="tg-0pky">0945 - 1030</td>
+                        <td class="tg-speaker">Keerti Choudhary</td>
                     </tr>
     <tr>
         <td class="tg-break" colspan="2">Coffee Break (1030 - 1100)</td>
@@ -736,15 +741,12 @@
                     </tr>
                     <tr>
                         <td class="tg-0pky">1500 - 1600<br></td>
-                        <td class="tg-speaker">Surender Baswana</td>
+                        <td class="tg-speaker">Surender Baswana: <a href="#surender-baswana">Compact structures for various mincuts</a></td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td class="tg-break" colspan="2">Coffee Break (1600 - 1645)</td>
-                    </tr>
-                    <tr>
-                        <td class="tg-0pky">1645 - 1730</td>
-                        <td class="tg-speaker">Keerti Choudhary</td>
-                    </tr>
+                    </tr> -->
+                    
                 </tbody>
             </table>
 
@@ -762,7 +764,7 @@
 
         <section id="schedule">
             <h2>Titles and Abstracts</h2>
-            <ul>
+            <ul class="abstract-list">
                 <li id="anupam-gupta"><strong>Anupam Gupta</strong>
                     <p><strong>Title:</strong> Good, Better, Best: Combinatorial Optimization via Comparisons</p>
                     <p><strong>Abstract:</strong> In classical combinatorial optimization problems, we are given a feasible set and an objective function (either explicitly, or via a value/demand oracle), and we want to find an optimal solution. Motivated by applications where users provide very sparse feedback, we ask: what if we are only allowed comparisons between feasible solutions? For instance, suppose we can compare any two edge-cuts in a graph and find out which is smaller, or if they are equal. Can we find the minimum cut using few comparisons? Can we do this efficiently? In this work, we pose and answer some of these questions, and suggest other exciting directions for research.</p>
@@ -805,6 +807,12 @@
                 <li id="kavitha-telikepalli"><strong>Kavitha Telikepalli</strong>
                     <p><strong>Title:</strong> Assignments, Arborescences, and Popularity</p>
                     <p><strong>Abstract:</strong> Matching problems with one-sided preferences are seen in applications such as campus housing allocation in universities. Popularity is a well-studied notion of optimality in this model. There is a simple algorithm to solve the popular assignment problem. A related problem asks for a popular arborescence in a directed graph where vertices have preferences over their in-neighbors. Such arborescences are relevant in liquid democracy. We will see that the popular arborescence problem can be solved by a generalization of the popular assignment algorithm.</p>
+                </li>
+                <li id="surender-baswana"><strong>Surender Baswana</strong>
+                    <p><strong>Title:</strong> Compact structures for various mincuts</p>
+                    <p><strong>Abstract:</strong> Mincuts are one of the most well-researched topics in algorithms. In recent years, there has been phenomenal research on algorithms for computing $(s, t)$-mincuts and global mincuts. On the other hand, the data structural and graph theoretical aspects of mincuts have also been well-researched in the last 50 years, though they are not as widely known despite being very fundamental and seminal.</p>
+                    <p>We shall begin with a light discussion of the following two classical results: (1) there is a directed acyclic graph that stores all $(s,t)$-mincuts of a graph, and (2) there is a tree-like graph that stores all global mincuts of a graph. We shall then discuss a structure that stores Steiner mincuts—a generalization of $(s,t)$-mincuts and global mincuts. This structure, designed by Dinitz and Vainshtein, is elegant and beautiful. We shall discuss this structure along with new and much simpler proofs of its properties.</p>
+                    <p><em>Note:</em> Anyone with basic knowledge of algorithms and elementary graph theory should be able to follow most of the talk.</p>
                 </li>
 
             </ul>
@@ -859,6 +867,42 @@
 
         // Initial check
         handleMobileScroll();
+
+        const hashLinks = document.querySelectorAll('a[href^="#"]');
+        let highlightedAbstract = null;
+
+        function highlightAbstractIfNeeded(target) {
+            if (!target || !target.closest('.abstract-list')) {
+                return;
+            }
+            if (highlightedAbstract) {
+                highlightedAbstract.classList.remove('abstract-highlight');
+            }
+            highlightedAbstract = target;
+            highlightedAbstract.classList.add('abstract-highlight');
+        }
+
+        hashLinks.forEach(link => {
+            link.addEventListener('click', event => {
+                const hash = link.getAttribute('href');
+                if (!hash || hash === '#') {
+                    return;
+                }
+                const target = document.querySelector(hash);
+                if (!target) {
+                    return;
+                }
+                event.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                highlightAbstractIfNeeded(target);
+                history.replaceState(null, '', hash);
+            });
+        });
+
+        if (window.location.hash) {
+            const initialTarget = document.querySelector(window.location.hash);
+            highlightAbstractIfNeeded(initialTarget);
+        }
     </script>
 </body>
 
