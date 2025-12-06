@@ -1,5 +1,5 @@
 html {
-  scroll-padding-top: 180px;
+  scroll-padding-top: 220px;
 }
 
 
@@ -13,6 +13,47 @@ body {
     line-height: 1.6;
 }
 
+.floating-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffcc00;
+    color: #000;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 2000;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    height: 40px; /* Explicit height to match calculations */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-banner a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.floating-banner a:hover {
+    text-decoration: underline;
+}
+
+.highlight-link {
+    color: #ff0000; /* Bright red */
+    font-weight: bold;
+    text-decoration: underline;
+    background-color: #ffff00; /* Yellow background for extra visibility */
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
 header {
     background-color: #00796b;
     color: #fff;
@@ -24,6 +65,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+body.with-banner header {
+    top: 40px;
 }
 
 .header-content {
@@ -119,6 +164,10 @@ main {
     padding: 20px;
     max-width: 1200px;
     margin: 160px auto 0;
+}
+
+body.with-banner main {
+    margin: 200px auto 0;
 }
 
 ul li {
