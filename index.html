@@ -54,7 +54,9 @@
                 </div>
                 <div class="info-item">
                     <span class="info-icon">📅</span>
-                    <strong>Date:</strong> December 08-12, 2025
+                    <div>
+                        <strong>Date:</strong> December 08-12, 2025
+                    </div>
                 </div>
                 <div class="info-item">
                     <span class="info-icon">📝</span>
@@ -68,11 +70,15 @@
                 </div>
                 <div class="info-item">
                     <span class="info-icon">📺</span>
-                    <strong>Live Streaming:</strong> <a href="https://youtube.com/playlist?list=PLmx4utxjUQD4V6coxKDLTS6IqJIbs5d2M&si=CVn0hxVryFUeJpWC" class="highlight-link">Click Here</a>
+                    <div>
+                        <strong>Live Streaming:</strong> <a href="https://youtube.com/playlist?list=PLmx4utxjUQD4V6coxKDLTS6IqJIbs5d2M&si=CVn0hxVryFUeJpWC" class="highlight-link">Click Here</a>
+                    </div>
                 </div>
                 <div class="info-item">
                     <span class="info-icon">✉️</span>
-                    <strong>Contact:</strong> <a href="mailto:algorithms.iisc@gmail.com">algorithms.iisc@gmail.com</a>
+                    <div>
+                        <strong>Contact:</strong> <a href="mailto:algorithms.iisc@gmail.com">algorithms.iisc@gmail.com</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -377,34 +383,9 @@
     </footer>
 
     <script>
-        // Countdown Timer
-        function updateCountdown() {
-            const conferenceDate = new Date('December 8, 2025 09:00:00').getTime();
-            const now = new Date().getTime();
-            const timeLeft = conferenceDate - now;
-            
-            if (timeLeft > 0) {
-                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-                
-                document.getElementById('days').textContent = days;
-                document.getElementById('hours').textContent = hours;
-                document.getElementById('minutes').textContent = minutes;
-                document.getElementById('seconds').textContent = seconds;
-            } else {
-                document.getElementById('countdown').innerHTML = '<h3>Conference has started!</h3>';
-            }
-        }
-        
-        // Update countdown every second
-        setInterval(updateCountdown, 1000);
-        updateCountdown(); // Initial call
-        
         // Mobile header scroll behavior
         function handleMobileScroll() {
-            const isPortraitMobile = window.innerWidth <= 720;
+            const isPortraitMobile = window.innerWidth <= 768;
             const isLandscapeMobile = window.innerWidth <= 1024 && window.innerHeight <= 600;
             
             if (isPortraitMobile || isLandscapeMobile) {
@@ -412,7 +393,6 @@
                 const headerContent = document.querySelector('.header-content');
                 const supportText = document.querySelector('header strong');
                 const nav = document.querySelector('nav');
-                const main = document.querySelector('main');
                 
                 if (window.scrollY > 25) {
                     if (isLandscapeMobile) {
@@ -421,7 +401,7 @@
                     headerContent.classList.add('scrolled');
                     supportText.classList.add('scrolled');
                     nav.classList.add('scrolled');
-                    main.style.marginTop = '80px'; // Adjust main margin when scrolled
+                    document.body.classList.add('scrolled-mode');
                 } else {
                     if (isLandscapeMobile) {
                         header.classList.remove('scrolled');
@@ -429,7 +409,7 @@
                     headerContent.classList.remove('scrolled');
                     supportText.classList.remove('scrolled');
                     nav.classList.remove('scrolled');
-                    main.style.marginTop = '160px'; // Reset main margin
+                    document.body.classList.remove('scrolled-mode');
                 }
             }
         }

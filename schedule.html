@@ -21,7 +21,12 @@
     <!-- src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMQL"> -->
 </head>
 
-<body id="top">
+<body id="top" class="with-banner">
+    <div class="floating-banner">
+        <a href="https://youtube.com/playlist?list=PLmx4utxjUQD4V6coxKDLTS6IqJIbs5d2M&si=CVn0hxVryFUeJpWC" target="_blank">
+            🔴 Watch the Live Stream Here!
+        </a>
+    </div>
     <header>
         <div class="header-content">
             <div class="logo-container">
@@ -831,7 +836,7 @@
 
         // Mobile header scroll behavior
         function handleMobileScroll() {
-            const isPortraitMobile = window.innerWidth <= 720;
+            const isPortraitMobile = window.innerWidth <= 768;
             const isLandscapeMobile = window.innerWidth <= 1024 && window.innerHeight <= 600;
 
             if (isPortraitMobile || isLandscapeMobile) {
@@ -839,7 +844,6 @@
                 const headerContent = document.querySelector('.header-content');
                 const supportText = document.querySelector('header strong');
                 const nav = document.querySelector('nav');
-                const main = document.querySelector('main');
 
                 if (window.scrollY > 25) {
                     if (isLandscapeMobile) {
@@ -848,7 +852,7 @@
                     headerContent.classList.add('scrolled');
                     supportText.classList.add('scrolled');
                     nav.classList.add('scrolled');
-                    main.style.marginTop = '80px'; // Adjust main margin when scrolled
+                    document.body.classList.add('scrolled-mode');
                 } else {
                     if (isLandscapeMobile) {
                         header.classList.remove('scrolled');
@@ -856,7 +860,7 @@
                     headerContent.classList.remove('scrolled');
                     supportText.classList.remove('scrolled');
                     nav.classList.remove('scrolled');
-                    main.style.marginTop = '160px'; // Reset main margin
+                    document.body.classList.remove('scrolled-mode');
                 }
             }
         }
