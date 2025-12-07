@@ -908,6 +908,127 @@
             highlightAbstractIfNeeded(initialTarget);
         }
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create and add button
+            const btn = document.createElement('button');
+            btn.id = 'goToNowBtn';
+            btn.className = 'go-to-now-btn visible';
+            btn.innerHTML = '<span>📍 Go to Now</span>';
+            btn.setAttribute('aria-label', 'Go to current session');
+            document.body.appendChild(btn);
+
+            // Workshop dates
+            const workshopDates = {
+                'day1': '2025-12-08',
+                'day2': '2025-12-09',
+                'day3': '2025-12-10',
+                'day4': '2025-12-11',
+                'day5': '2025-12-12'
+            };
+
+            function parseTime(timeStr) {
+                const match = timeStr.match(/(\d{4})/);
+                if (match) {
+                    const hours = parseInt(match[1].substring(0, 2));
+                    const minutes = parseInt(match[1].substring(2, 4));
+                    return { hours, minutes };
+                }
+                return null;
+            }
+
+            function getCurrentSession() {
+                const now = new Date();
+                // For testing: const now = new Date('2025-12-08T10:00:00');
+                
+                const todayStr = now.toISOString().split('T')[0];
+                
+                // Check if before workshop
+                if (now < new Date('2025-12-08')) {
+                    return document.getElementById('day1');
+                }
+
+                // Find current day
+                let currentDayId = null;
+                for (const [dayId, dateStr] of Object.entries(workshopDates)) {
+                    if (dateStr === todayStr) {
+                        currentDayId = dayId;
+                        break;
+                    }
+                }
+
+                if (!currentDayId) {
+                    // If after workshop or unknown date, default to day 1
+                    return document.getElementById('day1');
+                }
+
+                // Find session in current day
+                const rows = document.querySelectorAll('tbody tr');
+                let inCurrentDay = false;
+                let bestRow = null;
+
+                for (const row of rows) {
+                    if (row.id === currentDayId) {
+                        inCurrentDay = true;
+                        continue;
+                    }
+                    if (row.id && row.id.startsWith('day') && row.id !== currentDayId) {
+                        if (inCurrentDay) break; // End of current day
+                    }
+
+                    if (inCurrentDay) {
+                        const timeCell = row.querySelector('.tg-0pky');
+                        if (timeCell) {
+                            const time = parseTime(timeCell.innerText);
+                            if (time) {
+                                const sessionDate = new Date(now);
+                                sessionDate.setHours(time.hours, time.minutes, 0, 0);
+                                
+                                const diff = sessionDate - now;
+                                
+                                if (diff <= 0) {
+                                    // Session started in past (current candidate)
+                                    bestRow = row;
+                                } else {
+                                    // Session starts in future
+                                    if (!bestRow) {
+                                        // If no current session found yet, this is the next one
+                                        bestRow = row;
+                                    }
+                                    // If we have a current session, we stop here to keep it
+                                    break; 
+                                }
+                            }
+                        }
+                    }
+                }
+                return bestRow || document.getElementById(currentDayId);
+            }
+
+            btn.addEventListener('click', function() {
+                const target = getCurrentSession();
+                if (target) {
+                    // Account for fixed header
+                    const headerOffset = 120;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+
+                    // Highlight
+                    target.classList.add('current-session-highlight');
+                    
+                    // Remove highlight after animation
+                    setTimeout(() => {
+                        target.classList.remove('current-session-highlight');
+                    }, 2000);
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
