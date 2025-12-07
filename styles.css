@@ -602,19 +602,27 @@ footer p {
         padding: 5px 10px;
         flex-direction: row; /* Ensure horizontal layout */
         justify-content: space-between;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .header-content h1 {
-        font-size: 1.2em; /* Smaller title */
+        font-size: 1em; /* Smaller title to fit with logos */
         padding: 0.2em;
         margin: 0;
         white-space: nowrap; /* Keep title horizontal */
         overflow: hidden;
         text-overflow: ellipsis;
+        min-width: 0; /* Allow shrinking below content size */
+        flex: 1; /* Take up remaining space */
+        text-align: center;
     }
 
     .logo-container {
         margin: 0 5px; /* Compact margins */
+        flex: 0 0 auto; /* Do not grow, do not shrink, auto basis */
+        display: flex;
+        align-items: center;
     }
 
     .logo {
@@ -910,4 +918,21 @@ footer p {
 .current-session-highlight {
     animation: highlight-pulse 2s infinite;
     border-left: 4px solid #ffeb3b !important;
+}
+
+/* PhD Presentations Styles */
+.phd-presentations {
+    margin: 8px 0;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.phd-presentations li {
+    margin-bottom: 4px;
+    font-size: 0.95em;
+}
+
+.phd-title {
+    color: #0066cc; /* Blue color as requested */
+    font-weight: 500;
 }
