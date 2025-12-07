@@ -941,3 +941,81 @@ footer p {
     color: #0066cc; /* Blue color as requested */
     font-weight: 500;
 }
+
+/* Mobile Abstract Dropdown Styles */
+.mobile-abstract-wrapper {
+    display: none;
+    margin-top: 8px;
+}
+
+.view-abstract-btn {
+    background: none;
+    border: 1px solid #0066cc;
+    color: #0066cc;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.2s ease;
+}
+
+.view-abstract-btn:hover {
+    background-color: #e3f2fd;
+}
+
+.view-abstract-btn::after {
+    content: '▼';
+    font-size: 8px;
+}
+
+.view-abstract-btn.expanded::after {
+    content: '▲';
+}
+
+.mobile-abstract-content {
+    display: none;
+    margin-top: 8px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 3px solid #0066cc;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.mobile-abstract-content.visible {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile specific adjustments for schedule links */
+@media (max-width: 768px) {
+    .tg-speaker a, .tg-open-problem a {
+        color: #0066cc !important;
+        text-decoration: none !important;
+        pointer-events: none; /* Disable link navigation on mobile */
+        font-weight: 500;
+    }
+    
+    .mobile-abstract-wrapper {
+        display: block;
+    }
+
+    /* Reduce font size for bottom abstracts on mobile */
+    .abstract-list {
+        font-size: 13px;
+    }
+
+    .abstract-list p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}

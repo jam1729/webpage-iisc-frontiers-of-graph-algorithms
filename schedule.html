@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontiers of Graph Algorithms - Schedule</title>
-    <link rel="stylesheet" href="styles.css?v=1.1">
+    <link rel="stylesheet" href="styles.css?v=1.2">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -893,6 +893,11 @@
 
         hashLinks.forEach(link => {
             link.addEventListener('click', event => {
+                // Skip if it's a mobile view abstract interaction (handled by pointer-events: none in CSS, but good to be safe)
+                if (window.innerWidth <= 768 && link.closest('.tg-speaker')) {
+                    return;
+                }
+
                 const hash = link.getAttribute('href');
                 if (!hash || hash === '#') {
                     return;
@@ -912,6 +917,69 @@
             const initialTarget = document.querySelector(window.location.hash);
             highlightAbstractIfNeeded(initialTarget);
         }
+
+        // Mobile Abstract Dropdown Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const scheduleLinks = document.querySelectorAll('.tg-speaker a, .tg-open-problem a');
+            
+            scheduleLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (!href || !href.startsWith('#')) return;
+                
+                const targetId = href.substring(1);
+                const targetAbstract = document.getElementById(targetId);
+                
+                if (targetAbstract) {
+                    // Create wrapper
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'mobile-abstract-wrapper';
+                    
+                    // Create button
+                    const btn = document.createElement('button');
+                    btn.className = 'view-abstract-btn';
+                    btn.textContent = 'View Abstract';
+                    
+                    // Create content container
+                    const content = document.createElement('div');
+                    content.className = 'mobile-abstract-content';
+                    
+                    // Clone abstract content (excluding the name/title which is already in the schedule)
+                    // We look for paragraphs in the abstract li
+                    const paragraphs = targetAbstract.querySelectorAll('p');
+                    paragraphs.forEach(p => {
+                        // Skip the title paragraph as it is already displayed
+                        if (p.textContent.trim().startsWith('Title:')) {
+                            return;
+                        }
+                        content.appendChild(p.cloneNode(true));
+                    });
+                    
+                    // Assemble
+                    wrapper.appendChild(btn);
+                    wrapper.appendChild(content);
+                    
+                    // Insert after the link
+                    link.parentNode.insertBefore(wrapper, link.nextSibling);
+                    
+                    // Add click handler
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const isExpanded = btn.classList.contains('expanded');
+                        
+                        if (isExpanded) {
+                            btn.classList.remove('expanded');
+                            content.classList.remove('visible');
+                            btn.textContent = 'View Abstract';
+                        } else {
+                            btn.classList.add('expanded');
+                            content.classList.add('visible');
+                            btn.textContent = 'Hide Abstract';
+                        }
+                    });
+                }
+            });
+        });
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
