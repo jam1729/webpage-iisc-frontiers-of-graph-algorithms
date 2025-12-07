@@ -691,6 +691,11 @@ footer p {
     .info-item > div:not(.application-status) > strong {
         display: block;
     }
+
+    #speakers, #schedule, #details, #location {
+        padding: 15px;
+        margin-top: 10px;
+    }
 }
 
 /* Mobile scroll behavior styles - Portrait */
