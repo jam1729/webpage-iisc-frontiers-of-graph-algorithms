@@ -540,14 +540,14 @@
                     </tr>
                     <tr>
                         <td class="tg-0pky">1500 - 1600<br></td>
-                        <td class="tg-speaker">Thatchaphol Saranurak (1)</td>
+                        <td class="tg-speaker">Thatchaphol Saranurak (1): <a href="#thatchaphol-saranurak">Design templates of Dynamic Graph Algorithms I</a></td>
                     </tr>
                     <tr>
                         <td class="tg-break" colspan="2">Coffee Break (1600 - 1645)</td>
                     </tr>
                     <tr>
                         <td class="tg-0pky">1645 - 1730</td>
-                        <td class="tg-speaker">Thatchaphol Saranurak (2)</td>
+                        <td class="tg-speaker">Thatchaphol Saranurak (2): <a href="#thatchaphol-saranurak">Design templates of Dynamic Graph Algorithms II</a></td>
                     </tr>
 
                     <tr>
@@ -749,7 +749,7 @@
                     </tr>
                     <tr>
                         <td class="tg-0pky">1415 - 1500<br></td>
-                        <td class="tg-speaker">Amit Kumar</td>
+                        <td class="tg-speaker">Amit Kumar: <a href="#amit-kumar">Efficient Algorithms for the Disjoint Shortest Paths Problem and its Extensions</a></td>
                     </tr>
                     <tr>
                         <td class="tg-0pky">1500 - 1600<br></td>
@@ -835,6 +835,18 @@
                     <p><strong>Title:</strong> Graph problems through the lens of communication complexity: II</p>
                     <p><strong>Abstract:</strong> In the first two sessions of the workshop, we will introduce the audience to the area of communication complexity with the focus on graph problems. In the first half, we review the classical models of deterministic and randomised communication, and show, by means of reductions, how lower bounds are derived by appealing to well-studied problems such as index function, pointer chasing and set-disjointness. In the second half, we show a few communication protocols for solving fundamental graph problems such as minimum cut, vertex connectivity and bipartite maximum matching. We also mention how these communication protocols help us come up with efficient algorithms for these problems in various other models of computation.</p>
                     <p>These sessions are designed as boot-camp sessions and no prior familiarity with the area of communication complexity will be expected of the audience.</p>
+                </li>
+                <li id="amit-kumar"><strong>Amit Kumar</strong>
+                    <p><strong>Title:</strong> Efficient Algorithms for the Disjoint Shortest Paths Problem and its Extensions</p>
+                    <p><strong>Abstract:</strong> In this talk, we shall consdier the 2-Disjoint Shortest Paths problem: given a directed weighted graph and two terminal pairs $(s_1,t_1)$ and $(s_2,t_2)$, decide whether there exist vertex-disjoint shortest paths between each pair.</p>
+                    <p>Building on recent advances in disjoint shortest paths for DAGs and undirected graphs (Akmal et al. 2024), we present an $O(mn \log n)$-time algorithm for this problem in weighted directed graphs that do not contain negative or zero weight cycles. This algorithm presents a significant improvement over the previously known $O(m^5n)$-time bound (Berczi et al. 2017). Our approach exploits the algebraic structure of polynomials that enumerate shortest paths between terminal pairs. A key insight is that these polynomials admit a recursive decomposition, enabling efficient evaluation via dynamic programming over fields of characteristic two.</p>
+                    <p>In addition, we extend our techniques to a more general setting: given two terminal pairs $(s_1, t_1)$ and $(s_2, t_2)$ in a directed graph, find the minimum possible number of vertex intersections between any shortest path from $s_1$ to $t_1$ and $s_2$ to $t_2$. We call this the Minimum 2-Disjoint Shortest Paths problem. We provide the first efficient algorithm for this problem, including an $O(m^2 n^3)$-time algorithm for directed graphs with positive edge weights, and an $O(m+n)$-time algorithm for DAGs and undirected graphs.</p>
+                    <p>This is joint work with Keerti Choudhary and Lakshay Saggi.</p>
+                </li>
+                <li id="thatchaphol-saranurak"><strong>Thatchaphol Saranurak</strong>
+                    <p><strong>Title:</strong> Design templates of Dynamic Graph Algorithms</p>
+                    <p><strong>Abstract:</strong> I will explain three simple yet powerful templates behind many dynamic graph algorithms in the literature, including (1) rebuilding in the background, (2) batching, and (3) vertex sparsifiers. 
+                    As examples, we will see algorithms for dynamic approximate matching, dynamic connectivity, and dynamic minmax paths.</p>
                 </li>
 
             </ul>
