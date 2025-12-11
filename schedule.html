@@ -683,12 +683,10 @@
                     <tr>
                         <td class="tg-break" colspan="2">Coffee Break (1030 - 1100)</td>
                     </tr>
-                    <tr>
-                        <td class="tg-0pky">1100 - 1200</td>
-                        <td class="tg-speaker">Debmalya Panigrahi</td>
-                    </tr>
-
-                    <tr>
+    <tr>
+        <td class="tg-0pky">1100 - 1200</td>
+        <td class="tg-speaker">Debmalya Panigrahi: <a href="#debmalya-panigrahi">Network Unreliability in Graphs and Hypergraphs</a></td>
+    </tr>                    <tr>
                         <td class="tg-break" colspan="3">Lunch (1200 - 1330)</td>
                     </tr>
 
@@ -712,7 +710,7 @@
                     </tr>
     <tr>
         <td class="tg-0pky">1645 - 1730</td>
-        <td class="tg-speaker">Saket Saurabh</td>
+        <td class="tg-speaker">Saket Saurabh: <a href="#saket-saurabh">The Curious Case of Hedge Cut</a></td>
     </tr>                   <tr>
                         <td class="tg-day-spacer" colspan="3"></td>
                     </tr>
@@ -864,6 +862,27 @@
                 <li id="naveen-garg"><strong>Naveen Garg</strong>
                     <p><strong>Title:</strong> Seymour instances, half-integral flows and uncrossable cut-cover</p>
                     <p><strong>Abstract:</strong> The cut condition is necessary and sufficient for routing of multicommodity flow when the union of the supply and demand graph is planar; such instances are called Seymour instances. We consider the problem of maximizing ½-integral flow and provide a tight relation with integer multicut in such instances. To do so we prove that the primal-dual algorithm of Williamson et.al. for finding a minimum cover of uncrossable set functions can be modified to obtain a half-integral dual.</p>
+                </li>
+                <li id="saket-saurabh"><strong>Saket Saurabh</strong>
+                    <p><strong>Title:</strong> The Curious Case of Hedge Cut</p>
+                    <p><strong>Abstract:</strong> In the <em>Hedge Cut</em> problem, the edges of a graph are partitioned into groups called <em>hedges</em>, and we ask: what is the minimum number of hedges we need to delete to disconnect the graph? Ghaffari, Karger, and Panigrahi (SODA 2017) showed that Hedge Cut can be solved in <em>quasipolynomial time</em>, which raised the hope that there might even be a <em>polynomial-time</em> algorithm. Jaffke, Lima, Masarík, Pilipczuk, and Souza (SODA 2023) complemented this by showing that, assuming the Exponential Time Hypothesis (ETH), <em>no polynomial-time algorithm exists</em>.</p>
+                    <p>In this talk, we show that <em>Hedge Cut is fixed-parameter tractable</em> when parameterized by the solution size $\ell$. In particular, we give an algorithm with running time
+                    \[
+                      \binom{O(\log n) + \ell}{\ell} \cdot m^{O(1)},
+                    \]
+                    which can be upper bounded by
+                    \[
+                      c^{\ell} \cdot (n+m)^{O(1)}
+                    \]
+                    for any constant $c>1$. This running time simultaneously reflects that the problem is <em>quasipolynomial-time solvable</em> and that it is <em>fixed-parameter tractable in $\ell$</em>.</p>
+                    <p>We further generalize this to an algorithm for <em>Hedge $k$-Cut</em>, with running time
+                    \[
+                      \binom{O(k \log n) + \ell}{\ell} \cdot n^{O(k)} \cdot m^{O(1)}.
+                    \]</p>
+                </li>
+                <li id="debmalya-panigrahi"><strong>Debmalya Panigrahi</strong>
+                    <p><strong>Title:</strong> Network Unreliability in Graphs and Hypergraphs</p>
+                    <p><strong>Abstract:</strong> The (all-terminal) network unreliability problem asks for an estimation of the probability that a given network disconnects when every edge (or hyperedge) fails independently with a given probability. This is one of the original #P-hard problems from Valiant's seminal 1979 paper introducing this complexity class for counting problems. In this talk, I will describe recent progress in this problem on graphs and hypergraphs.</p>
                 </li>
 
             </ul>
@@ -1105,11 +1124,8 @@
                                     bestRow = row;
                                 } else {
                                     // Session starts in future
-                                    if (!bestRow) {
-                                        // If no current session found yet, this is the next one
-                                        bestRow = row;
-                                    }
-                                    // If we have a current session, we stop here to keep it
+                                    // If we haven't found a past session, it means we are before the first session.
+                                    // We want to return null (so it defaults to day header), not this future session.
                                     break; 
                                 }
                             }
