@@ -1018,4 +1018,57 @@ footer p {
         font-size: 13px;
         line-height: 1.5;
     }
+
+    /* Hide the desktop slides link on mobile */
+    .tg-speaker .slides-link {
+        display: none !important;
+    }
+
+    /* Enable clicks on the mobile slides button */
+    .mobile-slides-btn {
+        pointer-events: auto !important;
+    }
+}
+
+/* Slides Link Styles */
+.slides-link {
+    text-decoration: none;
+    margin-left: 8px;
+    font-size: 0.85em;
+    vertical-align: middle;
+    color: #28a745;
+    border: 1px solid #28a745;
+    padding: 2px 8px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.slides-link:hover {
+    background-color: #e8f5e9;
+    text-decoration: none;
+    transform: translateY(-1px);
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Mobile Slides Button */
+.mobile-slides-btn {
+    background: none;
+    border: 1px solid #28a745;
+    color: #28a745;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    margin-left: 8px;
+    transition: all 0.2s ease;
+}
+
+.mobile-slides-btn:hover {
+    background-color: #e8f5e9;
 }

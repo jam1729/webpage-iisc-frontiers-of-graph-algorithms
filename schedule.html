@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontiers of Graph Algorithms - Schedule</title>
-    <link rel="stylesheet" href="styles.css?v=1.2">
+    <link rel="stylesheet" href="styles.css?v=1.3">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -563,14 +563,14 @@
                     </tr>
                     <tr>
                         <td class="tg-0pky">0930 - 1030</td>
-                        <td class="tg-speaker">Greg Bodwin (1)</td>
+                        <td class="tg-speaker">Greg Bodwin (1): <a href="#greg-bodwin">The Forbidden Structure Method in Graph Metric Sparsification</a> <a href="slides/greg-bodwin/Forbidden Pattern Method.pptx" class="slides-link" target="_blank" title="Download Slides">📥 Slides</a></td>
                     </tr>
                     <tr>
                         <td class="tg-break" colspan="2">Coffee Break (1030 - 1100)</td>
                     </tr>
                     <tr>
                         <td class="tg-0pky">1100 - 1200</td>
-                        <td class="tg-speaker">Greg Bodwin (2)</td>
+                        <td class="tg-speaker">Greg Bodwin (2): <a href="#greg-bodwin">The Forbidden Structure Method in Graph Metric Sparsification</a> <a href="slides/greg-bodwin/Turan Problems.pptx" class="slides-link" target="_blank" title="Download Slides">📥 Slides</a></td>
                     </tr>
 
                     <tr>
@@ -884,6 +884,11 @@
                     <p><strong>Title:</strong> Network Unreliability in Graphs and Hypergraphs</p>
                     <p><strong>Abstract:</strong> The (all-terminal) network unreliability problem asks for an estimation of the probability that a given network disconnects when every edge (or hyperedge) fails independently with a given probability. This is one of the original #P-hard problems from Valiant's seminal 1979 paper introducing this complexity class for counting problems. In this talk, I will describe recent progress in this problem on graphs and hypergraphs.</p>
                 </li>
+                <li id="greg-bodwin"><strong>Greg Bodwin</strong>
+                    <p><strong>Title:</strong> The Forbidden Structure Method in Graph Metric Sparsification</p>
+                    <p><strong>Abstract:</strong> We will survey the "forbidden structure method," a recently-popular technique for building graph metric sparsifiers.  In this method, one uses a simple greedy algorithm to construct a sparsifier, and then shows that the sparsifier may not have a certain structure as a subgraph (or similar).  Then, one applies bounds from extremal combinatorics to control the maximum possible size of a graph avoiding this structure.  We will demonstrate this method on spanners and preservers as our main sparsifiers of interest.</p>
+                    <p>The first part of this talk will focus on algorithms that reduce to forbidden structure problems.  The second part will overview methods from extremal combinatorics for proving bounds on these problems.</p>
+                </li>
 
             </ul>
         </section>
@@ -983,6 +988,9 @@
             const scheduleLinks = document.querySelectorAll('.tg-speaker a, .tg-open-problem a');
             
             scheduleLinks.forEach(link => {
+                // Skip slides links
+                if (link.classList.contains('slides-link')) return;
+
                 const href = link.getAttribute('href');
                 if (!href || !href.startsWith('#')) return;
                 
@@ -998,6 +1006,17 @@
                     const btn = document.createElement('button');
                     btn.className = 'view-abstract-btn';
                     btn.textContent = 'View Abstract';
+
+                    // Check for slides link
+                    const slidesLink = link.parentNode.querySelector('.slides-link');
+                    let slidesBtn = null;
+                    if (slidesLink) {
+                        slidesBtn = document.createElement('a');
+                        slidesBtn.className = 'mobile-slides-btn';
+                        slidesBtn.href = slidesLink.href;
+                        slidesBtn.target = '_blank';
+                        slidesBtn.textContent = '📥 Slides';
+                    }
                     
                     // Create content container
                     const content = document.createElement('div');
@@ -1016,6 +1035,9 @@
                     
                     // Assemble
                     wrapper.appendChild(btn);
+                    if (slidesBtn) {
+                        wrapper.appendChild(slidesBtn);
+                    }
                     wrapper.appendChild(content);
                     
                     // Insert after the link
